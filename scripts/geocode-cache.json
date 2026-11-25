@@ -1,0 +1,1595 @@
+{
+  "molly-2": {
+    "lat": 25.026393,
+    "lng": 121.551659,
+    "score": 100,
+    "matched": "台北市大安區全安里樂利路52號, 10679",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市大安區樂利路52號"
+  },
+  "molly-3": {
+    "lat": 25.048444,
+    "lng": 121.522626,
+    "score": 100,
+    "matched": "台北市中山區正得里天津街21號, 10441",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市中山區天津街21號"
+  },
+  "molly-1": {
+    "lat": 25.053711,
+    "lng": 121.535269,
+    "score": 100,
+    "matched": "台北市中山區中央里四平街93號, 10485",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市中山區四平街93號"
+  },
+  "molly-5": {
+    "lat": 24.151108,
+    "lng": 120.654894,
+    "score": 97.88,
+    "matched": "台中市公益路商圈公益路250號, 403026",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺中市西區公益路250號"
+  },
+  "molly-4": {
+    "lat": 37.570944,
+    "lng": 127.071502,
+    "score": 98.89,
+    "matched": "서울특별시 동대문구 장안동 367-3",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "서울특별시 동대문구 장안동 367-3, 韓國"
+  },
+  "molly-6": {
+    "lat": 42.796155,
+    "lng": 19.252099,
+    "score": 93.18,
+    "matched": "Montenegro",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "Montenegro 蒙特內哥羅，歐洲"
+  },
+  "molly-8": {
+    "lat": 25.082926,
+    "lng": 121.556712,
+    "score": 100,
+    "matched": "20 Jingye 3rd Rd, Jintai Li, Zhongshan District, Taipei City, 10466",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": ", Taiwan, Taipei City, Zhongshan District, Jingye 3rd Rd, 20號"
+  },
+  "molly-7": {
+    "lat": 25.038817,
+    "lng": 121.500843,
+    "score": 100,
+    "matched": "台北市萬華區富民里桂林路109號, 10848",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市萬華區桂林路109號"
+  },
+  "molly-10": {
+    "lat": 25.033131,
+    "lng": 121.56772,
+    "score": 70.56,
+    "matched": "台北市信義區",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "米嵐義式餐廳 , 信義區, Taipei"
+  },
+  "molly-12": {
+    "lat": 25.043009,
+    "lng": 121.504515,
+    "score": 100,
+    "matched": "台北市萬華區西門里成都路92號, 10845",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市萬華區成都路92號"
+  },
+  "molly-11": {
+    "lat": 25.04524,
+    "lng": 121.547653,
+    "score": 100,
+    "matched": "台北市松山區福成里市民大道四段91號, 10557",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市松山區市民大道四段91號"
+  },
+  "molly-9": {
+    "lat": 25.054199,
+    "lng": 121.523743,
+    "score": 100,
+    "matched": "台北市中山區康樂里中山北路二段39巷3號, 10450",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市中山區中山北路二段39巷3號"
+  },
+  "molly-16": {
+    "lat": 25.028358,
+    "lng": 121.552037,
+    "score": 100,
+    "matched": "台北市大安區法治里樂利路11巷22號, 10678",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市大安區樂利路11巷22號"
+  },
+  "molly-18": {
+    "lat": 25.029701,
+    "lng": 121.54252,
+    "score": 100,
+    "matched": "台北市大安區龍圖里瑞安街118號, 10661",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市大安區瑞安街118號"
+  },
+  "molly-17": {
+    "lat": 25.038412,
+    "lng": 121.563705,
+    "score": 75.48,
+    "matched": "Taipei City",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "Yoshikawa Seafood Don, Taipei, Taiwan"
+  },
+  "molly-14": {
+    "lat": 24.151198,
+    "lng": 120.655549,
+    "score": 97.88,
+    "matched": "台中市公益路商圈精誠十五街8號, 403031",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺中市西區精誠十五街8號"
+  },
+  "molly-15": {
+    "lat": 35.670483,
+    "lng": 139.765557,
+    "score": 85,
+    "matched": "Ginza, Chuo, Tokyo",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "Miko Sushi Ginza, Ginza, Tokyo"
+  },
+  "molly-22": {
+    "lat": 35.689456,
+    "lng": 139.691716,
+    "score": 72.5,
+    "matched": "Tokyo",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "Nemotora, 人形町, Tokyo"
+  },
+  "molly-27": {
+    "lat": 25.031404,
+    "lng": 121.559292,
+    "score": 100,
+    "matched": "台北市信義區景聯里吳興街8巷3號, 11041",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市信義區吳興街8巷3號"
+  },
+  "molly-20": {
+    "lat": 25.061686,
+    "lng": 121.542305,
+    "score": 100,
+    "matched": "台北市中山區江寧里民權東路三段60巷4號, 10476",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市中山區民權東路三段60巷4號"
+  },
+  "molly-24": {
+    "lat": 25.06579,
+    "lng": 121.52406,
+    "score": 100,
+    "matched": "台北市中山區晴光里雙城街28巷2號, 10460",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市中山區雙城街28巷2號"
+  },
+  "molly-23": {
+    "lat": 24.153391,
+    "lng": 120.649374,
+    "score": 100,
+    "matched": "台中市南屯區大墩路717-5號, 408032",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺中市南屯區大墩路717-5號"
+  },
+  "molly-28": {
+    "lat": 39.470846,
+    "lng": 75.995783,
+    "score": 85,
+    "matched": "古扎社区居民委员会, 阿热亚路, 古扎社区, 东湖街道 شەرقىي كۆل كوچا باشقارمىسى, 夏马勒巴格村 شامالباغ كەنتى, 喀什市 قەشقەر شەھىرى, 喀什地区 قەشقەر ۋىلايىتى, 新疆维吾尔自治区 شىنجاڭ ئۇيغۇر ئاپتونوم رايونی, 844000, 中国",
+    "source": "nominatim",
+    "precision": "area",
+    "queryUsed": "札金索斯，希臘（僅提及島嶼"
+  },
+  "molly-29": {
+    "lat": 25.040099,
+    "lng": 121.504181,
+    "score": 100,
+    "matched": "台北市萬華區新起里昆明街232號, 10850",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市萬華區昆明街232號"
+  },
+  "molly-34": {
+    "lat": 25.056762,
+    "lng": 121.527861,
+    "score": 100,
+    "matched": "台北市中山區中原里新生北路二段75號, 10459",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市中山區新生北路二段75號"
+  },
+  "molly-30": {
+    "lat": 25.038636,
+    "lng": 121.547935,
+    "score": 100,
+    "matched": "台北市大安區仁愛里仁愛路四段91巷5號, 10685",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北大安區仁愛路四段91巷5號"
+  },
+  "molly-31": {
+    "lat": 35.674612,
+    "lng": 139.767536,
+    "score": 98.95,
+    "matched": "1-6-6, Ginza, Chuo, Tokyo, 1040061",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "1 Chome-6-6 Ginza, Chuo City, Tokyo 104-0061, Japan"
+  },
+  "molly-33": {
+    "lat": 25.128949,
+    "lng": 121.744576,
+    "score": 85,
+    "matched": "濟州豆腐鍋之家, 仁二路, 廟口夜市, 玉田里, 仁愛區, 義重町, 基隆市, 20018, 臺灣",
+    "source": "nominatim",
+    "precision": "area",
+    "queryUsed": "埃及（僅提及國家"
+  },
+  "molly-32": {
+    "lat": 35.666073,
+    "lng": 139.770365,
+    "score": 88.15,
+    "matched": "東京都中央区築地４-８",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "〒104-0045 東京都中央区築地4丁目8−12, Tokyo"
+  },
+  "molly-38": {
+    "lat": 35.702106,
+    "lng": 139.747988,
+    "score": 91.11,
+    "matched": "Iidabashi, Chiyoda, Tokyo",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "山田の鰻, Iidabashi, Tokyo"
+  },
+  "molly-39": {
+    "lat": 25.039973,
+    "lng": 121.553926,
+    "score": 100,
+    "matched": "台北市大安區車層里忠孝東路四段216巷27弄17號, 10686",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市大安區忠孝東路四段216巷27弄17號"
+  },
+  "molly-37": {
+    "lat": 30.6586,
+    "lng": 108.139,
+    "score": 74.13,
+    "matched": "重庆国家",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "China travel clip 中國（僅提及國家，依據標籤"
+  },
+  "molly-35": {
+    "lat": 23.007558,
+    "lng": 120.237185,
+    "score": 100,
+    "matched": "臺南大天后宮",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "台南大天后宮, Tainan, Taiwan"
+  },
+  "molly-43": {
+    "lat": 25.059652,
+    "lng": 121.364699,
+    "score": 100,
+    "matched": "桃園市龜山區文化二路32-18號, 333",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "桃園市龜山區文化二路32-18號"
+  },
+  "molly-44": {
+    "lat": 25.036022,
+    "lng": 121.568694,
+    "score": 100,
+    "matched": "台北市信義區安康里松仁路99號, 11073",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市信義區松仁路99號"
+  },
+  "molly-45": {
+    "lat": 35.665766,
+    "lng": 139.714277,
+    "score": 95.65,
+    "matched": "東京都港区南青山３-１４-２８",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "東京都港区南青山3-14-28 KRKビル , Tokyo"
+  },
+  "molly-47": {
+    "lat": 3.054867,
+    "lng": 101.786383,
+    "score": 73,
+    "matched": "Cheras, Hulu Langat, Selangor",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "友愛中秋市集 , Yu Ai Food Industries HQ — near Balakong, Cheras"
+  },
+  "molly-46": {
+    "lat": 22.996371,
+    "lng": 120.197781,
+    "score": 97.88,
+    "matched": "台南市五條港和平街24號, 700014",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台南市中西區和平街24號"
+  },
+  "molly-48": {
+    "lat": 25.054371,
+    "lng": 121.547354,
+    "score": 96.36,
+    "matched": "台北市松山區中正里長春路498號, 10547",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市松長春路498號"
+  },
+  "molly-49": {
+    "lat": 25.039458,
+    "lng": 121.554702,
+    "score": 100,
+    "matched": "台北市大安區車層里延吉街160巷2號, 10696",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市大安區延吉街160巷2號"
+  },
+  "molly-51": {
+    "lat": 25.049061,
+    "lng": 121.565262,
+    "score": 100,
+    "matched": "台北市松山區新聚里八德路四段261號, 10561",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市松山區八德路四段261號"
+  },
+  "molly-53": {
+    "lat": 24.148718,
+    "lng": 120.650927,
+    "score": 96.92,
+    "matched": "台中市南屯區大墩十一街165號, 408031",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺中市南大墩十一街165號"
+  },
+  "molly-54": {
+    "lat": 25.030288,
+    "lng": 121.551339,
+    "score": 100,
+    "matched": "台北市大安區義安里安和路二段74巷8號, 10680",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市大安區安和路二段74巷8號"
+  },
+  "molly-56": {
+    "lat": 25.058193,
+    "lng": 121.525979,
+    "score": 100,
+    "matched": "台北市中山區聚盛里民生東路一段41號, 10451",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市中山區民生東路一段41號"
+  },
+  "molly-55": {
+    "lat": 24.958444,
+    "lng": 121.22397,
+    "score": 100,
+    "matched": "桃園市中壢區老街溪商圈延平路452號, 320003",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "桃園市中壢區延平路452號"
+  },
+  "molly-105": {
+    "lat": 25.082728,
+    "lng": 121.559398,
+    "score": 96.67,
+    "matched": "台北市中山區金泰里樂群三路301號, 10462",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市中樂群三路301號"
+  },
+  "molly-60": {
+    "lat": 25.041713,
+    "lng": 121.513243,
+    "score": 100,
+    "matched": "台北市中正區黎明里重慶南路一段141號, 10045",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市中正區重慶南路一段141號"
+  },
+  "molly-62": {
+    "lat": 35.813234,
+    "lng": 128.524241,
+    "score": 79.52,
+    "matched": "대구 달서구 진천동 진천로 51",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "회도라해물포차 , Jincheon branch, 대구 달서구 진천로 51"
+  },
+  "molly-63": {
+    "lat": 25.042407,
+    "lng": 121.53936,
+    "score": 100,
+    "matched": "台北市大安區昌隆里忠孝東路三段217巷1弄6號, 10653",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市大安區忠孝東路三段217巷1弄6號"
+  },
+  "molly-59": {
+    "lat": 25.057003,
+    "lng": 121.520839,
+    "score": 97.14,
+    "matched": "台北市中山區民安里民生西路66巷19號, 10448",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市中民生西路66巷19號"
+  },
+  "molly-61": {
+    "lat": 25.062032,
+    "lng": 121.525493,
+    "score": 100,
+    "matched": "台北市中山區聚葉里林森北路508號, 10451",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市中山區林森北路508號"
+  },
+  "molly-68": {
+    "lat": 37.5729,
+    "lng": 126.97928,
+    "score": 79.26,
+    "matched": "Jongno-gu, Seoul",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "11, Supyo-ro 28-gil, Jongno-gu, Seoul"
+  },
+  "molly-66": {
+    "lat": 23.140463,
+    "lng": 120.139132,
+    "score": 77.68,
+    "matched": "台南市七股區",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺南市七股區龍山211-7號"
+  },
+  "molly-65": {
+    "lat": 25.042932,
+    "lng": 121.56867,
+    "score": 100,
+    "matched": "台北市信義區敦厚里永吉路30巷122號, 11064",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市信義區永吉路30巷122號"
+  },
+  "molly-71": {
+    "lat": 25.028461,
+    "lng": 121.550392,
+    "score": 96.92,
+    "matched": "台北市大安區全安里安和路二段155號, 10680",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市大安和路二段155號"
+  },
+  "molly-67": {
+    "lat": 25.051344,
+    "lng": 121.558219,
+    "score": 100,
+    "matched": "台北市松山區吉祥里南京東路五段4號, 10597",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市松山區南京東路五段4號"
+  },
+  "molly-72": {
+    "lat": 25.0262,
+    "lng": 121.541645,
+    "score": 100,
+    "matched": "台北市大安區龍生里和平東路二段107巷23弄17號, 10664",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北大安區和平東路二段107巷23弄17號"
+  },
+  "molly-78": {
+    "lat": 24.829212,
+    "lng": 121.0174,
+    "score": 96.67,
+    "matched": "新竹縣縣政二路460號, 302007",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "新竹縣竹縣政二路460號"
+  },
+  "molly-74": {
+    "lat": 25.036233,
+    "lng": 121.548055,
+    "score": 100,
+    "matched": "台北市大安區德安里四維路28號, 10691",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市大安區四維路28號"
+  },
+  "molly-77": {
+    "lat": 34.677912,
+    "lng": 135.498,
+    "score": 100,
+    "matched": "大阪府大阪市中央区南船場４-１４-１",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "大阪市中央区南船場４丁目１４−1, Osaka"
+  },
+  "molly-75": {
+    "lat": 35.01031,
+    "lng": 135.763318,
+    "score": 100,
+    "matched": "6048106, Marukizaimokucho, Nakagyo-Ku, Kyoto",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "Marukizaimokucho, Nakagyo Ward, Kyoto, 604-8106, Japan"
+  },
+  "molly-76": {
+    "lat": 25.041433,
+    "lng": 121.527112,
+    "score": 96.36,
+    "matched": "台北市中正區幸福里濟南路二段9號, 10054",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市中濟南路二段9號"
+  },
+  "molly-79": {
+    "lat": 37.566,
+    "lng": 126.9784,
+    "score": 73,
+    "matched": "Seoul",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "PPEUM 弘大國際店 , Hongdae, Seoul"
+  },
+  "molly-80": {
+    "lat": 25.012276,
+    "lng": 121.509644,
+    "score": 100,
+    "matched": "新北市永和區仁愛路213號, 234008",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "新北市永和區仁愛路213號"
+  },
+  "molly-85": {
+    "lat": 24.996056,
+    "lng": 121.296885,
+    "score": 92.95,
+    "matched": "桃園市文中東路79號, 330029",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "桃園市桃園區文中東路79號"
+  },
+  "molly-84": {
+    "lat": 22.98098,
+    "lng": 120.207211,
+    "score": 100,
+    "matched": "台南市南區體育路9號, 702002",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台南：台南市南區體育路9號"
+  },
+  "molly-82": {
+    "lat": 25.032188,
+    "lng": 121.545855,
+    "score": 100,
+    "matched": "台北市大安區住安里大安路二段68號, 10667",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市大安區大安路二段68號"
+  },
+  "molly-87": {
+    "lat": 25.042215,
+    "lng": 121.563074,
+    "score": 100,
+    "matched": "台北市信義區新仁里忠孝東路四段553巷6弄6號, 11072",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市信義區忠孝東路四段553巷6弄6號"
+  },
+  "molly-83": {
+    "lat": 2.5,
+    "lng": 112.5,
+    "score": 76.89,
+    "matched": "馬來西亞",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "馬來西亞（僅提及國家"
+  },
+  "molly-92": {
+    "lat": 25.044254,
+    "lng": 121.524773,
+    "score": 97.14,
+    "matched": "台北市中正區幸福里忠孝東路一段108號, 10050",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市中忠孝東路一段108號"
+  },
+  "molly-91": {
+    "lat": 25.036938,
+    "lng": 121.558026,
+    "score": 100,
+    "matched": "台北市信義區正和里光復南路417巷37號, 11073",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市信義區光復南路417巷37號"
+  },
+  "molly-93": {
+    "lat": 25.030215,
+    "lng": 121.529703,
+    "score": 100,
+    "matched": "台北市大安區福住里永康街47巷3號, 10650",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台灣台北市大安區永康街47巷3號"
+  },
+  "molly-96": {
+    "lat": 25.029892,
+    "lng": 121.54241,
+    "score": 97.33,
+    "matched": "台北市大安區龍圖里瑞安街120巷3弄1號, 10661",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市大瑞安街120巷3弄1號"
+  },
+  "molly-89": {
+    "lat": 38.297336,
+    "lng": 141.419566,
+    "score": 70,
+    "matched": "宮城県石巻市田代浜釜山",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "釜山，札嘎其市場旁"
+  },
+  "molly-100": {
+    "lat": 35.670483,
+    "lng": 139.765557,
+    "score": 83.08,
+    "matched": "Ginza, Chuo, Tokyo",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "登龍門 Toryumon, Ginza, Tokyo, Japan"
+  },
+  "molly-101": {
+    "lat": 25.082419,
+    "lng": 121.545438,
+    "score": 96.92,
+    "matched": "台北市下塔悠大直街52巷26號, 104036",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市中大直街52巷26號"
+  },
+  "molly-99": {
+    "lat": 58.091044,
+    "lng": 7.257671,
+    "score": 77.96,
+    "matched": "Lindesnes, Agder",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "Under, Lindesnes, southernmost Norway"
+  },
+  "molly-103": {
+    "lat": 24.994041,
+    "lng": 121.541375,
+    "score": 100,
+    "matched": "台北市文山區景華里羅斯福路六段309號, 11670",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市文山區羅斯福路六段309號"
+  },
+  "molly-102": {
+    "lat": 40.741545,
+    "lng": -73.99932,
+    "score": 76.38,
+    "matched": "Sanyuu West",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "Sanyuu West 美國紐約市（未提及地址"
+  },
+  "molly-104": {
+    "lat": 25.030836,
+    "lng": 121.550066,
+    "score": 100,
+    "matched": "台北市大安區義安里敦化南路二段81巷45弄14號, 10682",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市大安區敦化南路二段81巷45弄14號"
+  },
+  "molly-114": {
+    "lat": 24.156324,
+    "lng": 120.663827,
+    "score": 97.88,
+    "matched": "台中市博館三街56號, 403017",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺中市西區博館三街56號"
+  },
+  "molly-112": {
+    "lat": 25.009639,
+    "lng": 121.311119,
+    "score": 92.95,
+    "matched": "桃園市春日路634號, 330017",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "桃園市桃園區春日路634號"
+  },
+  "molly-109": {
+    "lat": 25.044357,
+    "lng": 121.551047,
+    "score": 100,
+    "matched": "台北市大安區建安里市民大道四段118號, 10690",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市大安區市民大道四段118號"
+  },
+  "molly-108": {
+    "lat": 22.992902,
+    "lng": 120.180361,
+    "score": 97.88,
+    "matched": "台南市怡平路97號, 708007",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台南市安平區怡平路97號"
+  },
+  "molly-113": {
+    "lat": 25.044354,
+    "lng": 121.547181,
+    "score": 100,
+    "matched": "台北市大安區光武里大安路一段19巷20號, 10697",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市大安區大安路一段19巷20號"
+  },
+  "molly-115": {
+    "lat": 25.064576,
+    "lng": 121.522494,
+    "score": 100,
+    "matched": "台北市中山區恆安里中山北路三段23號, 10453",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市中山區中山北路三段23號"
+  },
+  "molly-125": {
+    "lat": 25.038625,
+    "lng": 121.551327,
+    "score": 100,
+    "matched": "台北市大安區建倫里安和路一段49巷3號, 10688",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市大安區安和路一段49巷3號"
+  },
+  "molly-118": {
+    "lat": 25.033285,
+    "lng": 121.529962,
+    "score": 100,
+    "matched": "台北市大安區福住里永康街1號",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市大安區永康街1號"
+  },
+  "molly-120": {
+    "lat": 24.76723,
+    "lng": 120.967845,
+    "score": 80,
+    "matched": "新竹市石渣崙藝術路, 300114",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "新竹市藝術路19號"
+  },
+  "molly-126": {
+    "lat": 36.356271,
+    "lng": 127.806396,
+    "score": 80,
+    "matched": "韓国",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "韓國首爾"
+  },
+  "molly-138": {
+    "lat": 25.043504,
+    "lng": 121.547922,
+    "score": 95.33,
+    "matched": "台北市大安區忠孝復興SOGO敦化南路一段160巷12號, 106069",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市大安區敦化南路一段160巷12號，捷運忠孝敦化站9號出口步行3分鐘"
+  },
+  "molly-132": {
+    "lat": 25.041888,
+    "lng": 121.550528,
+    "score": 74.2,
+    "matched": "台北市大安區東區",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北東區——貼文中未提及街道地址或地標"
+  },
+  "molly-131": {
+    "lat": 25.02207,
+    "lng": 121.497417,
+    "score": 100,
+    "matched": "台北市萬華區保德里長泰街139巷2之1號, 10869",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市萬華區長泰街139巷2-1號"
+  },
+  "molly-135": {
+    "lat": 11.157202,
+    "lng": 119.437682,
+    "score": 76.23,
+    "matched": "El Nido, Palawan, Mimaropa",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "El Nido, Philippines — 「深深」El Nido 旅遊團 菲律賓巴拉望愛妮島"
+  },
+  "molly-134": {
+    "lat": 40.71427,
+    "lng": -74.00597,
+    "score": 72.36,
+    "matched": "紐約市, Neu Jorck",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "紐約壽司 美國紐約市"
+  },
+  "molly-129": {
+    "lat": 37.557142,
+    "lng": 126.92619,
+    "score": 85,
+    "matched": "동교동, 서교동, 마포구, 서울특별시, 04051, 대한민국",
+    "source": "nominatim",
+    "precision": "exact",
+    "queryUsed": "首爾特別市 麻浦區 東橋洞 152-13"
+  },
+  "molly-150": {
+    "lat": 35.674049,
+    "lng": 139.737815,
+    "score": 94.71,
+    "matched": "東京都港区赤坂３-１２-２",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "東京都港区赤坂3-12-2赤坂慶和ビル , Akasaka, Tokyo, Japan"
+  },
+  "molly-148": {
+    "lat": 25.053171,
+    "lng": 121.521293,
+    "score": 97.18,
+    "matched": "台北市中山區南西商圈中山北路二段16巷15號, 104002",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市中山區中山北路二段16巷15號，捷運中山站附近"
+  },
+  "molly-142": {
+    "lat": 25.103698,
+    "lng": 121.524803,
+    "score": 93.86,
+    "matched": "台北市士林區中山北路六段35號, 111",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市士林區中山北路六段35巷42號，捷運芝山站步行3分鐘"
+  },
+  "molly-143": {
+    "lat": 25.042911,
+    "lng": 121.555477,
+    "score": 100,
+    "matched": "台北市大安區華聲里延吉街131巷31號, 10696",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市大安區延吉街131巷31號"
+  },
+  "molly-151": {
+    "lat": 24.808196,
+    "lng": 120.97227,
+    "score": 98.75,
+    "matched": "新竹市東區東大路一段136號, 300026",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "新竹市東區東大路一段136號，新竹"
+  },
+  "molly-144": {
+    "lat": 25.0262,
+    "lng": 121.541645,
+    "score": 100,
+    "matched": "台北市大安區龍生里和平東路二段107巷23弄17號, 10664",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市大安區和平東路二段107巷23弄17號"
+  },
+  "molly-156": {
+    "lat": 34.058516,
+    "lng": 134.29287,
+    "score": 80,
+    "matched": "徳島県吉野川市川島町児島奈良",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "奈良風景 日本奈良"
+  },
+  "molly-154": {
+    "lat": 35.689456,
+    "lng": 139.691716,
+    "score": 70,
+    "matched": "東京都東京",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "東京會說中文的日本髮型師 日本東京"
+  },
+  "molly-155": {
+    "lat": 25.082796,
+    "lng": 121.560329,
+    "score": 98.36,
+    "matched": "春大直",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市中山區樂群三路303號，春大直"
+  },
+  "molly-160": {
+    "lat": 24.160755,
+    "lng": 120.648623,
+    "score": 96.73,
+    "matched": "台中市文心路二段610號, 407543",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台中市西屯區文心路二段610號，台中"
+  },
+  "molly-157": {
+    "lat": 25.060871,
+    "lng": 121.563398,
+    "score": 83.53,
+    "matched": "台北市松山區富錦里三民路146號, 10588",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市松三民路146號，民生社區，台北"
+  },
+  "molly-159": {
+    "lat": 36.655227,
+    "lng": 139.271495,
+    "score": 70,
+    "matched": "日本",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "日本關西伊勢志摩"
+  },
+  "molly-162": {
+    "lat": 40.718889,
+    "lng": -73.98996,
+    "score": 100,
+    "matched": "Orchard Street",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "Orchard Street, Lower East Side, New York, USA"
+  },
+  "molly-164": {
+    "lat": 37.53391,
+    "lng": 126.9775,
+    "score": 82.33,
+    "matched": "Yongsan-gu, Seoul",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "18-12, Sinheung-ro 15-gil, Yongsan-gu, Seoul, South Korea"
+  },
+  "molly-169": {
+    "lat": 25.030632,
+    "lng": 121.557832,
+    "score": 100,
+    "matched": "台北市信義區中興里基隆路二段74號, 11052",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市信義區基隆路二段74號"
+  },
+  "molly-168": {
+    "lat": 25.02523,
+    "lng": 121.462218,
+    "score": 95.27,
+    "matched": "新北市英士路7號, 220015",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "新北市板橋區英士路7之1號，板橋"
+  },
+  "molly-167": {
+    "lat": 40.734089,
+    "lng": -74.008489,
+    "score": 93.9,
+    "matched": "West Village, New York City, New York",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "Sendo West Village, West Village, New York City, USA"
+  },
+  "molly-165": {
+    "lat": 25.05264,
+    "lng": 121.52089,
+    "score": 95.61,
+    "matched": "台北市中山區南西商圈南京西路15號, 104002",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市中山區南京西路15號，捷運中山站步行1分鐘"
+  },
+  "molly-176": {
+    "lat": 25.040564,
+    "lng": 121.563025,
+    "score": 79.94,
+    "matched": "台北市信義區興隆里逸仙路50巷28號, 11071",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市信逸仙路50巷28號，捷運市政府站步行3分鐘"
+  },
+  "molly-175": {
+    "lat": 22.754694,
+    "lng": 121.146698,
+    "score": 94.21,
+    "matched": "Taitung City, Taitung County",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "桑樹溪 , Taitung, Taitung, Taiwan"
+  },
+  "molly-174": {
+    "lat": 36.655227,
+    "lng": 139.271495,
+    "score": 70,
+    "matched": "日本",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "日本關東煮店 日本"
+  },
+  "molly-172": {
+    "lat": 24.668253,
+    "lng": 121.798958,
+    "score": 97.89,
+    "matched": "宜蘭縣羅東鎮富農路三段169號, 265030",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "宜蘭縣羅東鎮富農路三段169號，羅東，宜蘭"
+  },
+  "molly-171": {
+    "lat": 25.057985,
+    "lng": 121.499297,
+    "score": 98.89,
+    "matched": "新北市三重區正義南路86巷30號, 241003",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "新北市三重區正義南路86巷30號，三重"
+  },
+  "molly-170": {
+    "lat": 25.026456,
+    "lng": 121.534563,
+    "score": 77.4,
+    "matched": "台北市大安區",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "台北忠孝復興一帶，大安區"
+  },
+  "molly-177": {
+    "lat": 24.748313,
+    "lng": 121.732369,
+    "score": 88.9,
+    "matched": "宜蘭縣宜蘭市女中路三段641號, 260022",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "宜蘭縣宜女中路三段641號，宜蘭市"
+  },
+  "molly-182": {
+    "lat": 25.039359,
+    "lng": 121.566667,
+    "score": 100,
+    "matched": "台北市信義區興雅里松高路19號, 11073",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市信義區松高路19號"
+  },
+  "molly-179": {
+    "lat": 2.5,
+    "lng": 112.5,
+    "score": 72.76,
+    "matched": "馬來西亞",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "馬來西亞亞庇附近的隱藏小島 馬來西亞"
+  },
+  "molly-178": {
+    "lat": 22.679593,
+    "lng": 120.311073,
+    "score": 98.67,
+    "matched": "高雄市左營區文自路559號, 813029",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "高雄市左營區文自路559號，高雄"
+  },
+  "molly-180": {
+    "lat": 35.689456,
+    "lng": 139.691716,
+    "score": 86.67,
+    "matched": "東京都東京",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "日本東京銀座"
+  },
+  "molly-181": {
+    "lat": 48.85341,
+    "lng": 2.3488,
+    "score": 100,
+    "matched": "巴黎, Département de Paris, Ile-de-France",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "法國巴黎"
+  },
+  "molly-183": {
+    "lat": 25.039137,
+    "lng": 121.542719,
+    "score": 100,
+    "matched": "台北市大安區義村里仁愛路三段123巷9弄11號, 10656",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市大安區仁愛路三段123巷9弄11號"
+  },
+  "molly-192": {
+    "lat": -20.462473,
+    "lng": -66.824082,
+    "score": 100,
+    "matched": "Uyuni",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "Uyuni, Bolivia"
+  },
+  "molly-186": {
+    "lat": 25.05464,
+    "lng": 121.550439,
+    "score": 100,
+    "matched": "台北市松山區中華里敦化北路165巷10號, 10549",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市松山區敦化北路165巷10號"
+  },
+  "molly-188": {
+    "lat": 35.158758,
+    "lng": 135.433828,
+    "score": 72.23,
+    "matched": "京都府船井郡京丹波町上野大阪",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "日本大阪 — 帖子中未提及地址"
+  },
+  "molly-189": {
+    "lat": 38.928558,
+    "lng": 141.367721,
+    "score": 70,
+    "matched": "岩手県一関市千厩町清田桃園",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "桃園青埔 — 帖子中未提及地址"
+  },
+  "molly-190": {
+    "lat": 22.53806,
+    "lng": 113.91472,
+    "score": 74.17,
+    "matched": "广东深圳南山",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "深圳南山 — 帖子中未提及地址"
+  },
+  "molly-195": {
+    "lat": 23.562548,
+    "lng": 120.875257,
+    "score": 97.47,
+    "matched": "南投縣信義鄉太平巷72號, 556",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "南投縣信義鄉太平巷72之6號"
+  },
+  "molly-194": {
+    "lat": 25.038412,
+    "lng": 121.563705,
+    "score": 72.27,
+    "matched": "台北市台北市",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "台北捷運信義線「大安森林公園站」陽光大廳"
+  },
+  "molly-199": {
+    "lat": 35.689456,
+    "lng": 139.691716,
+    "score": 70,
+    "matched": "東京都東京",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "東京銀座 — 確切地點僅在影片中，標題文字未提及"
+  },
+  "molly-200": {
+    "lat": 25.038412,
+    "lng": 121.563705,
+    "score": 72.16,
+    "matched": "台北市台北市",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "台北中山站附近 — 標題中未提及確切地址"
+  },
+  "molly-201": {
+    "lat": 31.535158,
+    "lng": 114.880532,
+    "score": 73.31,
+    "matched": "河南省信阳市新新街",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "新北中和華新街／南勢角緬甸街"
+  },
+  "molly-203": {
+    "lat": 25.033524,
+    "lng": 121.564604,
+    "score": 100,
+    "matched": "台北市信義區西村里信義路五段7號, 11049",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市信義區信義路五段7號"
+  },
+  "molly-205": {
+    "lat": 24.143676,
+    "lng": 120.643386,
+    "score": 100,
+    "matched": "台中市南屯區惠文路336-1號, 408007",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台中市南屯區惠文路336-1號"
+  },
+  "molly-209": {
+    "lat": 25.051011,
+    "lng": 121.524348,
+    "score": 100,
+    "matched": "台北市中山區正得里中山北路一段121巷27之1號, 10446",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市中山區中山北路一段121巷27-1號"
+  },
+  "molly-202": {
+    "lat": 25.063309,
+    "lng": 121.500393,
+    "score": 100,
+    "matched": "新北市三重區重新路一段113號, 241048",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "新北市三重區重新路一段113號"
+  },
+  "molly-210": {
+    "lat": -5,
+    "lng": 56,
+    "score": 100,
+    "matched": "Seychelles",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "Seychelles, Indian Ocean"
+  },
+  "molly-212": {
+    "lat": 25.042407,
+    "lng": 121.53936,
+    "score": 97.78,
+    "matched": "台北市大安區昌隆里忠孝東路三段217巷1弄6號, 10653",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市大忠孝東路三段217巷1弄6號"
+  },
+  "molly-211": {
+    "lat": 25.050901,
+    "lng": 121.516616,
+    "score": 100,
+    "matched": "台北市大同區建明里長安西路150號, 10349",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市大同區長安西路150號"
+  },
+  "molly-216": {
+    "lat": 25.05652,
+    "lng": 121.518286,
+    "score": 100,
+    "matched": "台北市大同區承德路二段101號, 103017",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市大同區承德路二段101號"
+  },
+  "molly-218": {
+    "lat": 25.04291,
+    "lng": 121.54218,
+    "score": 100,
+    "matched": "台北市大安區誠安里忠孝東路三段251巷7弄10號, 10654",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市大安區忠孝東路三段251巷7弄10號"
+  },
+  "molly-213": {
+    "lat": 34.666786,
+    "lng": 135.501964,
+    "score": 96.67,
+    "matched": "大阪府大阪市中央区難波３-４-１６",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "大阪府大阪市中央区難波3-4-16 ECS第32ビル -B"
+  },
+  "molly-220": {
+    "lat": 25.042279,
+    "lng": 121.529391,
+    "score": 100,
+    "matched": "台北市中正區幸福里金山南路一段8號, 10053",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市中正區金山南路一段8號"
+  },
+  "molly-226": {
+    "lat": 38.918171,
+    "lng": 121.628294,
+    "score": 71.55,
+    "matched": "遼寧省大連市",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "大連（僅有城市名，如原文所示"
+  },
+  "molly-223": {
+    "lat": 35.66461,
+    "lng": 139.755948,
+    "score": 81.54,
+    "matched": "Shimbashi, Minato, Tokyo",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "布丁仙人 / Hekkelun, Tokyo, Shimbashi"
+  },
+  "molly-225": {
+    "lat": 23.130196,
+    "lng": 113.259294,
+    "score": 71.96,
+    "matched": "廣州, 廣東",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "廣州 — 帖子中未提及確切地址"
+  },
+  "molly-222": {
+    "lat": 40.721984,
+    "lng": -73.986643,
+    "score": 100,
+    "matched": "Takumi Omakase",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "Takumi Omakase, 181 Essex St, New York, NY 10002"
+  },
+  "molly-231": {
+    "lat": 25.044257,
+    "lng": 121.525,
+    "score": 98.89,
+    "matched": "台北市中正區忠孝幸福大樓忠孝東路一段108號, 100024",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市中正區忠孝東路一段108號，台北"
+  },
+  "molly-235": {
+    "lat": 25.051858,
+    "lng": 121.550229,
+    "score": 98.82,
+    "matched": "台北市松山區南京東路四段19號, 105022",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市松山區南京東路四段19號，台北"
+  },
+  "molly-229": {
+    "lat": 38.087756,
+    "lng": 13.539352,
+    "score": 84,
+    "matched": "Fishing Port",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "Daxi Fishing Port"
+  },
+  "molly-234": {
+    "lat": 25.040198,
+    "lng": 121.578305,
+    "score": 96.76,
+    "matched": "台北市信義區松光里忠孝東路五段492巷16號, 11083",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市信義區忠孝東路五段492巷16號，台北"
+  },
+  "molly-232": {
+    "lat": 25.059177,
+    "lng": 121.530109,
+    "score": 90.77,
+    "matched": "台北市中山區中庄里吉林路228號, 10469",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市中吉林路228號，台北"
+  },
+  "molly-228": {
+    "lat": 25.108231,
+    "lng": 121.84425,
+    "score": 71.73,
+    "matched": "Jiu Fen, Xinbei Shi",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "Seaside trail near Jiufen, Ruifang, near Jiufen; entrance coords , photo spot"
+  },
+  "molly-244": {
+    "lat": 25.095036,
+    "lng": 121.525697,
+    "score": 74.25,
+    "matched": "台北市士林區士林",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "台北士林 — 外雙溪一帶，無招牌"
+  },
+  "molly-243": {
+    "lat": 22.79711,
+    "lng": 112.87144,
+    "score": 79.1,
+    "matched": "广东江门雲南",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "雲南旅遊短片 中國雲南"
+  },
+  "molly-241": {
+    "lat": 36.655227,
+    "lng": 139.271495,
+    "score": 70,
+    "matched": "日本",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "日本煙火 — 彩雲孔雀千輪 日本"
+  },
+  "molly-246": {
+    "lat": 36.655227,
+    "lng": 139.271495,
+    "score": 70,
+    "matched": "日本",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "日本大阪北新地（可透過 Google Maps 預訂"
+  },
+  "molly-249": {
+    "lat": 43.064306,
+    "lng": 141.34684,
+    "score": 70,
+    "matched": "北海道",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "北海道夢幻寶冠蟹 日本北海道"
+  },
+  "molly-248": {
+    "lat": 25.082811,
+    "lng": 121.552648,
+    "score": 94.67,
+    "matched": "台北市中山區成功里樂群三路39號, 10462",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市中山區樂群三路39號，台北"
+  },
+  "molly-251": {
+    "lat": 25.050292,
+    "lng": 121.447708,
+    "score": 98.67,
+    "matched": "新北市新莊區中和街202號, 242025",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "新北市新莊區中和街202號，新北"
+  },
+  "molly-247": {
+    "lat": 25.035944,
+    "lng": 121.54558,
+    "score": 90,
+    "matched": "台北市大安區仁慈里東豐街30號, 10684",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市大東豐街30號，台北"
+  },
+  "molly-253": {
+    "lat": 25.066164,
+    "lng": 121.524766,
+    "score": 92,
+    "matched": "台北市中山區晴光里雙城街25巷6之1號, 10461",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市中雙城街25巷6-1號，台北"
+  },
+  "molly-252": {
+    "lat": 34.700669,
+    "lng": 135.501199,
+    "score": 99.05,
+    "matched": "大阪府大阪市北区曾根崎２-１０-１９",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "大阪市北区曽根崎2丁目10-19 2階，大阪，日本"
+  },
+  "molly-263": {
+    "lat": 25.045328,
+    "lng": 121.505425,
+    "score": 98.57,
+    "matched": "台北市萬華區西門町昆明街84號, 108003",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市萬華區昆明街84號，台北"
+  },
+  "molly-257": {
+    "lat": 25.054199,
+    "lng": 121.523743,
+    "score": 92.94,
+    "matched": "台北市中山區康樂里中山北路二段39巷3號, 10450",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市中中山北路二段39巷3號，台北"
+  },
+  "molly-258": {
+    "lat": 11.997622,
+    "lng": 120.20298,
+    "score": 74.25,
+    "matched": "Coron, Palawan, Mimaropa",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "Paolyn Houseboats, Coron Island, Banuang Daan private lagoon, Coron Island, Philippines"
+  },
+  "molly-259": {
+    "lat": 25.031308,
+    "lng": 121.560051,
+    "score": 95.79,
+    "matched": "台北市信義區景聯里吳興街37號, 11041",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市信義區吳興街37號，台北"
+  },
+  "molly-261": {
+    "lat": 25.0541,
+    "lng": 121.519864,
+    "score": 92,
+    "matched": "台北市大同區光能里赤峰街33巷12號, 10352",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市大赤峰街33巷12號，台北"
+  },
+  "molly-256": {
+    "lat": 25.053914,
+    "lng": 121.523216,
+    "score": 98.95,
+    "matched": "台北市中山區晶華酒店商圈中山北路二段39巷3號, 104010",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "台北市中山區中山北路二段39巷3號 ，台北"
+  },
+  "molly-266": {
+    "lat": 25.038618,
+    "lng": 121.567465,
+    "score": 95.79,
+    "matched": "台北市信義區西村里松高路18號, 11073",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "臺北市信義區松高路18號，台北"
+  },
+  "molly-267": {
+    "lat": 40.713047,
+    "lng": -74.00723,
+    "score": 83.33,
+    "matched": "New York",
+    "source": "arcgis",
+    "precision": "area",
+    "queryUsed": "Umeko, New York"
+  },
+  "molly-264": {
+    "lat": 25.024803,
+    "lng": 121.253696,
+    "score": 98.67,
+    "matched": "桃園市蘆竹區大新路177號, 338027",
+    "source": "arcgis",
+    "precision": "exact",
+    "queryUsed": "桃園市蘆竹區大新路177號，桃園"
+  }
+}
