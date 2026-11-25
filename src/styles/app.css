@@ -47,7 +47,9 @@ body,
   font-family: var(--font-sans);
   font-weight: 400;
   line-height: 1.65;
+  overscroll-behavior: none;
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button,
@@ -233,6 +235,33 @@ a {
 }
 
 .header-theme-btn:hover {
+  background: var(--bg-hover);
+  color: var(--accent);
+}
+
+.header-install-btn {
+  height: 100%;
+  padding: 0 18px;
+  border: 0;
+  border-left: solid 1px var(--border-subtle);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink-heading);
+  font-family: var(--font-display);
+  font-size: 0.64rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.header-install-btn:hover {
   background: var(--bg-hover);
   color: var(--accent);
 }
@@ -2017,6 +2046,16 @@ a {
     width: 50px;
   }
 
+  .header-install-btn {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+  }
+
+  .header-install-btn .btn-label {
+    display: none;
+  }
+
   .header-add-btn {
     height: 50px;
     padding: 0 14px !important;
@@ -2113,5 +2152,41 @@ a {
 @media (max-width: 340px) {
   .filter-toggle-label {
     display: none;
+  }
+}
+
+/* Standalone PWA safe-area support for notched iOS / Android devices */
+@supports (padding: env(safe-area-inset-top)) {
+  .app-header {
+    padding-top: env(safe-area-inset-top);
+    padding-left: max(22px, env(safe-area-inset-left));
+    padding-right: env(safe-area-inset-right);
+    height: calc(var(--header-height) + env(safe-area-inset-top));
+  }
+
+  .sidebar-list {
+    padding-bottom: calc(28px + env(safe-area-inset-bottom));
+  }
+
+  .list-mode-container {
+    padding-bottom: calc(36px + env(safe-area-inset-bottom));
+  }
+
+  @media (max-width: 820px) {
+    .app-header {
+      padding-left: max(14px, env(safe-area-inset-left));
+    }
+
+    .sidebar-list {
+      padding-bottom: calc(24px + env(safe-area-inset-bottom));
+    }
+  }
+
+  @media (max-width: 600px) {
+    .app-header {
+      height: auto;
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+    }
   }
 }

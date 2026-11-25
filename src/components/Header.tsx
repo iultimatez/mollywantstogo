@@ -1,4 +1,12 @@
-import { List, Map as MapIcon, MapPin, Moon, Plus, Sun } from 'lucide-react';
+import {
+  Download,
+  List,
+  Map as MapIcon,
+  MapPin,
+  Moon,
+  Plus,
+  Sun,
+} from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface HeaderProps {
@@ -9,6 +17,7 @@ interface HeaderProps {
   wantCount?: number;
   theme: 'light' | 'dark';
   onToggleTheme: () => void;
+  onInstallClick?: () => void;
   onAddClick?: () => void;
 }
 
@@ -20,6 +29,7 @@ export function Header({
   wantCount,
   theme,
   onToggleTheme,
+  onInstallClick,
   onAddClick,
 }: HeaderProps) {
   return (
@@ -87,6 +97,19 @@ export function Header({
       </nav>
 
       <div className="header-actions">
+        {onInstallClick && (
+          <button
+            type="button"
+            className="header-install-btn"
+            onClick={onInstallClick}
+            aria-label="Install app"
+            title="Install app to home screen"
+          >
+            <Download size={15} strokeWidth={2.2} aria-hidden="true" />
+            <span className="btn-label">Install</span>
+          </button>
+        )}
+
         <button
           type="button"
           className="header-theme-btn"

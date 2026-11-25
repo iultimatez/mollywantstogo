@@ -7,6 +7,7 @@ import { MapView } from './components/MapView';
 import { PlaceCard } from './components/PlaceCard';
 import { PlaceModal } from './components/PlaceModal';
 import { PlaceDraft, usePlaces } from './hooks/usePlaces';
+import { usePwaInstall } from './hooks/usePwaInstall';
 import {
   DEFAULT_SORT_OPTION,
   Place,
@@ -69,6 +70,8 @@ export function App() {
     resetToDefaults,
   } = usePlaces();
 
+  const { canInstall, promptInstall } = usePwaInstall();
+
   const initialRoute = useMemo(() => readRouteFromLocation(), []);
   const [mode, setMode] = useState<ViewMode>(initialRoute.mode);
 
@@ -98,6 +101,13 @@ export function App() {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', resolvedTheme);
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeColorMeta) {
+      themeColorMeta.setAttribute(
+        'content',
+        resolvedTheme === 'dark' ? '#1f2022' : '#ffffff'
+      );
+    }
   }, [resolvedTheme]);
 
   const handleToggleTheme = () => {
@@ -419,6 +429,7 @@ export function App() {
         wantCount={ENABLE_WRITE_FEATURES ? wantCount : undefined}
         theme={resolvedTheme}
         onToggleTheme={handleToggleTheme}
+        onInstallClick={canInstall ? promptInstall : undefined}
         onAddClick={ENABLE_WRITE_FEATURES ? handleOpenAddModal : undefined}
       />
 
