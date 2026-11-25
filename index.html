@@ -13,10 +13,13 @@
     <script>
       (function () {
         try {
-          localStorage.removeItem('molly-wants-to-go:theme:v1');
-          var theme = window.matchMedia('(prefers-color-scheme: dark)').matches
-            ? 'dark'
-            : 'light';
+          var stored = localStorage.getItem('molly-wants-to-go:theme:v1');
+          var theme =
+            stored === 'dark' || stored === 'light'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
           document.documentElement.setAttribute('data-theme', theme);
         } catch (e) {}
       })();

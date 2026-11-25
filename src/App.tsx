@@ -18,6 +18,27 @@ import {
 } from './types';
 
 const ENABLE_WRITE_FEATURES = false;
+const THEME_STORAGE_KEY = 'molly-wants-to-go:theme:v1';
+
+type Theme = 'light' | 'dark';
+
+function getSystemTheme(): Theme {
+  if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
+    return 'light';
+  }
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light';
+}
+
+function readStoredTheme(): Theme | null {
+  try {
+    const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
+    return stored === 'dark' || stored === 'light' ? stored : null;
+  } catch {
+    return null;
+  }
+}
 
 function readRouteFromLocation(): {
   mode: ViewMode;
@@ -51,18 +72,22 @@ export function App() {
   const initialRoute = useMemo(() => readRouteFromLocation(), []);
   const [mode, setMode] = useState<ViewMode>(initialRoute.mode);
 
-  // Always follow the OS/browser color scheme and react live to system changes
+  const [systemTheme, setSystemTheme] = useState<Theme>(getSystemTheme);
+  const [themeOverride, setThemeOverride] = useState<Theme | null>(
+    readStoredTheme
+  );
+  const resolvedTheme: Theme = themeOverride ?? systemTheme;
+
+  // Follow OS/browser color scheme live whenever no manual override is active
   useEffect(() => {
     if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
       return;
     }
     const mq = window.matchMedia('(prefers-color-scheme: dark)');
-    const applySystemTheme = (isDark: boolean) => {
-      document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-    };
-    applySystemTheme(mq.matches);
+    setSystemTheme(mq.matches ? 'dark' : 'light');
 
-    const handleChange = (e: MediaQueryListEvent) => applySystemTheme(e.matches);
+    const handleChange = (e: MediaQueryListEvent) =>
+      setSystemTheme(e.matches ? 'dark' : 'light');
     if (typeof mq.addEventListener === 'function') {
       mq.addEventListener('change', handleChange);
       return () => mq.removeEventListener('change', handleChange);
@@ -70,6 +95,25 @@ export function App() {
     mq.addListener(handleChange);
     return () => mq.removeListener(handleChange);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', resolvedTheme);
+  }, [resolvedTheme]);
+
+  const handleToggleTheme = () => {
+    const nextTheme: Theme = resolvedTheme === 'dark' ? 'light' : 'dark';
+    const nextOverride = nextTheme === systemTheme ? null : nextTheme;
+    setThemeOverride(nextOverride);
+    try {
+      if (nextOverride) {
+        window.localStorage.setItem(THEME_STORAGE_KEY, nextOverride);
+      } else {
+        window.localStorage.removeItem(THEME_STORAGE_KEY);
+      }
+    } catch {
+      // Ignore storage errors
+    }
+  };
   const [searchQuery, setSearchQuery] = useState('');
   const [activeRegion, setActiveRegion] = useState<PlaceRegion | 'all'>('all');
   const [regionTrigger, setRegionTrigger] = useState(0);
@@ -373,6 +417,8 @@ export function App() {
         totalCount={places.length}
         pinnedCount={pinnedTotalCount}
         wantCount={ENABLE_WRITE_FEATURES ? wantCount : undefined}
+        theme={resolvedTheme}
+        onToggleTheme={handleToggleTheme}
         onAddClick={ENABLE_WRITE_FEATURES ? handleOpenAddModal : undefined}
       />
 

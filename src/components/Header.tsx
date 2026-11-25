@@ -1,4 +1,4 @@
-import { List, Map as MapIcon, MapPin, Plus } from 'lucide-react';
+import { List, Map as MapIcon, MapPin, Moon, Plus, Sun } from 'lucide-react';
 import { ViewMode } from '../types';
 
 interface HeaderProps {
@@ -7,6 +7,8 @@ interface HeaderProps {
   totalCount: number;
   pinnedCount: number;
   wantCount?: number;
+  theme: 'light' | 'dark';
+  onToggleTheme: () => void;
   onAddClick?: () => void;
 }
 
@@ -16,6 +18,8 @@ export function Header({
   totalCount,
   pinnedCount,
   wantCount,
+  theme,
+  onToggleTheme,
   onAddClick,
 }: HeaderProps) {
   return (
@@ -82,8 +86,27 @@ export function Header({
         </a>
       </nav>
 
-      {onAddClick && (
-        <div className="header-actions">
+      <div className="header-actions">
+        <button
+          type="button"
+          className="header-theme-btn"
+          onClick={onToggleTheme}
+          aria-label={
+            theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+          }
+          title={
+            theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+          }
+          aria-pressed={theme === 'dark'}
+        >
+          {theme === 'dark' ? (
+            <Sun size={16} strokeWidth={2.1} aria-hidden="true" />
+          ) : (
+            <Moon size={16} strokeWidth={2.1} aria-hidden="true" />
+          )}
+        </button>
+
+        {onAddClick && (
           <button
             type="button"
             className="btn btn-primary header-add-btn"
@@ -94,8 +117,8 @@ export function Header({
             <Plus size={16} strokeWidth={2.4} />
             <span className="btn-label">Add place</span>
           </button>
-        </div>
-      )}
+        )}
+      </div>
     </header>
   );
 }

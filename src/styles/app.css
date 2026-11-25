@@ -217,6 +217,26 @@ a {
   gap: 0;
 }
 
+.header-theme-btn {
+  height: 100%;
+  width: 56px;
+  border: 0;
+  border-left: solid 1px var(--border-subtle);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.header-theme-btn:hover {
+  background: var(--bg-hover);
+  color: var(--accent);
+}
+
 /* Header Add button docked cleanly in top bar */
 .header-add-btn {
   height: 100%;
@@ -1990,6 +2010,11 @@ a {
   .header-actions {
     order: 2;
     flex-shrink: 0;
+  }
+
+  .header-theme-btn {
+    height: 50px;
+    width: 50px;
   }
 
   .header-add-btn {
