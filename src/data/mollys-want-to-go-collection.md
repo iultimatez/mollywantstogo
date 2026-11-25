@@ -2,7 +2,7 @@
 
 來源：Molly Yun-Wen Tsang（@mollyywtsang）與 Thomas 共享的 Instagram 協作收藏「想去」（want to go），收藏編號 2168799727355712。Instagram 顯示共有 268 則貼文，其中 267 則可取得（1 則無法取得，推測已刪除或無法存取，本文件未虛構第 268 則）。
 
-本文件為繁體中文（臺灣用法）版，共 267 則，編號 1–267。其中 205 則有 Google Maps 連結，62 則未附（非實體地點、貼文未提供地點，或地點不明確）。店名、地名及地址均保留原文，不另行發明；Instagram 連結與 Google Maps 連結均與來源完全一致。
+本文件為繁體中文（臺灣用法）版，共 267 則，編號 1–267。其中 207 則有 Google Maps 連結，60 則未附（非實體地點、貼文未提供地點，或地點不明確）。店名、地名及地址均保留原文，不另行發明；Instagram 連結與 Google Maps 連結均與來源完全一致。
 
 ## 日期說明
 
@@ -97,7 +97,7 @@
 | 81 | 忻鮨壽司 | 餐廳 — 無菜單料理 | 台北市萬華區桂林路109號 | 2026-11-23 00:03 | 2026-07-06 | [開啟](https://www.google.com/maps/search/?api=1&query=%E5%BF%BB%E9%AE%A8%E5%A3%BD%E5%8F%B8%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E8%90%AC%E8%8F%AF%E5%8D%80%E6%A1%82%E6%9E%97%E8%B7%AF109%E8%99%9F) |
 | 82 | 龍割烹 Ryu Kappou | 餐廳 — 割烹／無菜單料理 | 台北市大安區大安路二段68號 | 2026-11-23 00:03 | 2026-10-19 | [開啟](https://www.google.com/maps/search/?api=1&query=%E9%BE%8D%E5%89%B2%E7%83%B9+Ryu+Kappou%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%A4%A7%E5%AE%89%E8%B7%AF%E4%BA%8C%E6%AE%B568%E8%99%9F) |
 | 83 | Giant crab and roast suckling pig in Malaysia — inferred title; no restaurant name stated in post | 餐廳 — 海鮮（推測） | 馬來西亞（僅提及國家；貼文未提供城市、地址或餐廳名稱） | 2026-11-23 00:03 | 2026-06-25 | — |
-| 84 | 橋山.鵲邸壽喜燒 (Tainan) and 橋山.壽喜燒 すき焼き專門店 はしやま (Taipei) — two branches in one post | 餐廳 — 壽喜燒 | 台南：台南市南區體育路9號；台北：106臺北市大安區龍圖里瑞安街120巷3弄1號 | 2026-11-23 00:03 | 2026-10-03 | — |
+| 84 | 橋山.鵲邸壽喜燒 (Tainan) and 橋山.壽喜燒 すき焼き專門店 はしやま (Taipei) — two branches in one post | 餐廳 — 壽喜燒 | 台南：台南市南區體育路9號；台北：106臺北市大安區龍圖里瑞安街120巷3弄1號 | 2026-11-23 00:03 | 2026-10-03 | [台南](https://www.google.com/maps/search/?api=1&query=%E6%A9%8B%E5%B1%B1.%E9%B5%B2%E9%82%B8%E5%A3%BD%E5%96%9C%E7%87%92%2C%20%E5%8F%B0%E5%8D%97%E5%B8%82%E5%8D%97%E5%8D%80%E9%AB%94%E8%82%B2%E8%B7%AF9%E8%99%9F)／[台北](https://www.google.com/maps/search/?api=1&query=%E6%A9%8B%E5%B1%B1.%E5%A3%BD%E5%96%9C%E7%87%92%20%E3%81%99%E3%81%8D%E7%84%BC%E3%81%8D%E5%B0%88%E9%96%80%E5%BA%97%20%E3%81%AF%E3%81%97%E3%82%84%E3%81%BE%2C%20106%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E9%BE%8D%E5%9C%96%E9%87%8C%E7%91%9E%E5%AE%89%E8%A1%97120%E5%B7%B73%E5%BC%841%E8%99%9F) |
 | 85 | 正谷家-韓式火鍋.一隻雞.料理 (Korean soy-marinated crab/shrimp, hot pot, one-chicken) | 餐廳 — 韓式料理 | 330桃園市桃園區文中東路79號 | 2026-11-23 00:03 | 2026-06-02 | [開啟](https://www.google.com/maps/search/?api=1&query=%E6%AD%A3%E8%B0%B7%E5%AE%B6-%E9%9F%93%E5%BC%8F%E7%81%AB%E9%8D%8B.%E4%B8%80%E9%9A%BB%E9%9B%9E.%E6%96%99%E7%90%86%2C+330%E6%A1%83%E5%9C%92%E5%B8%82%E6%A1%83%E5%9C%92%E5%8D%80%E6%96%87%E4%B8%AD%E6%9D%B1%E8%B7%AF79%E8%99%9F) |
 | 86 | 祇園.禪院壽喜燒專門店 | 餐廳 — 壽喜燒（關西風） | 台北市大安區樂利路11巷22號 | 2026-11-23 00:03 | 2026-03-30 | [開啟](https://www.google.com/maps/search/?api=1&query=%E7%A5%87%E5%9C%92.%E7%A6%AA%E9%99%A2%E5%A3%BD%E5%96%9C%E7%87%92%E5%B0%88%E9%96%80%E5%BA%97%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E6%A8%82%E5%88%A9%E8%B7%AF11%E5%B7%B722%E8%99%9F) |
 | 87 | 五之神製作所 — uni tsukemen (limited edition) | 餐廳 — 拉麵 | 台北市信義區忠孝東路四段553巷6弄6號 | 2026-11-23 00:03 | 2026-06-26 | [開啟](https://www.google.com/maps/search/?api=1&query=%E4%BA%94%E4%B9%8B%E7%A5%9E%E8%A3%BD%E4%BD%9C%E6%89%80%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E5%BF%A0%E5%AD%9D%E6%9D%B1%E8%B7%AF%E5%9B%9B%E6%AE%B5553%E5%B7%B76%E5%BC%846%E8%99%9F) |
@@ -183,7 +183,7 @@
 | 167 | Sendo West Village (@sendo.nyc) | 餐廳（壽司） | 美國紐約市西村（未提及街道地址） | 2026-11-23 00:03 | 2026-05-13 | [開啟](https://www.google.com/maps/search/?api=1&query=Sendo+West+Village%2C+West+Village%2C+New+York+City%2C+USA) |
 | 168 | 饞嘴貓重慶酸辣粉 | 餐廳（麵食） | 新北市板橋區英士路7之1號，板橋 | 2026-11-23 00:03 | 2023-04-05 | [開啟](https://www.google.com/maps/search/?api=1&query=%E9%A5%9E%E5%98%B4%E8%B2%93%E9%87%8D%E6%85%B6%E9%85%B8%E8%BE%A3%E7%B2%89%2C+%E6%96%B0%E5%8C%97%E5%B8%82%E6%9D%BF%E6%A9%8B%E5%8D%80%E8%8B%B1%E5%A3%AB%E8%B7%AF7%E4%B9%8B1%E8%99%9F%2C+Banqiao) |
 | 169 | 週末炸雞俱樂部 | 餐廳（台式炸雞） | 臺北市信義區基隆路二段74號 | 2026-11-23 00:03 | 2026-10-15 | [開啟](https://www.google.com/maps/search/?api=1&query=%E9%80%B1%E6%9C%AB%E7%82%B8%E9%9B%9E%E4%BF%B1%E6%A8%82%E9%83%A8%2C+%E8%87%BA%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E5%9F%BA%E9%9A%86%E8%B7%AF%E4%BA%8C%E6%AE%B574%E8%99%9F) |
-| 170 | 忠孝復興五家美食懶人包（推測） | 餐廳（懶人包） | 台北忠孝復興一帶，大安區（各店地址如下） | 2026-11-23 00:03 | 2025-03-05 | — |
+| 170 | 忠孝復興五家美食懶人包（推測） | 餐廳（懶人包） | 台北忠孝復興一帶，大安區（各店地址如下） | 2026-11-23 00:03 | 2025-03-05 | [可口豬肝湯麻醬麵](https://www.google.com/maps/search/?api=1&query=%E5%8F%AF%E5%8F%A3%E8%B1%AC%E8%82%9D%E6%B9%AF%E9%BA%BB%E9%86%AC%E9%BA%B5%2C%20%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%A4%A7%E5%AE%89%E8%B7%AF%E4%B8%80%E6%AE%B551%E5%B7%B73%E8%99%9F)／[米樂拾穗](https://www.google.com/maps/search/?api=1&query=%E7%B1%B3%E6%A8%82%E6%8B%BE%E7%A9%97%2C%20%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BE%A9%E8%88%88%E5%8D%97%E8%B7%AF%E4%B8%80%E6%AE%B5107%E5%B7%B732%E8%99%9F)／[無名蘿蔔絲餅](https://www.google.com/maps/search/?api=1&query=%E7%84%A1%E5%90%8D%E8%98%BF%E8%94%94%E7%B5%B2%E9%A4%85%2C%20%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BE%A9%E8%88%88%E5%8D%97%E8%B7%AF%E4%B8%80%E6%AE%B5135%E5%B7%B73%E8%99%9F)／[上善豆家](https://www.google.com/maps/search/?api=1&query=%E4%B8%8A%E5%96%84%E8%B1%86%E5%AE%B6%2C%20%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BE%A9%E8%88%88%E5%8D%97%E8%B7%AF%E4%B8%80%E6%AE%B5107%E5%B7%B716%E8%99%9F)（鶴茶樓：連鎖店，未提供分店地址，未附連結） |
 | 171 | 門前隱味牛肉麵 | 餐廳（牛肉麵） | 新北市三重區正義南路86巷30號（空軍三重一村內），三重 | 2026-11-23 00:03 | 2023-09-25 | [開啟](https://www.google.com/maps/search/?api=1&query=%E9%96%80%E5%89%8D%E9%9A%B1%E5%91%B3%E7%89%9B%E8%82%89%E9%BA%B5%2C+%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%89%E9%87%8D%E5%8D%80%E6%AD%A3%E7%BE%A9%E5%8D%97%E8%B7%AF86%E5%B7%B730%E8%99%9F+%28inside+Air+Force+Sanchong+Village%29%2C+Sanchong) |
 | 172 | 貳玥Villa | 住宿（別墅／民宿） | 宜蘭縣羅東鎮富農路三段169號，羅東，宜蘭 | 2026-11-23 00:03 | 2025-01-19 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%B2%B3%E7%8E%A5Villa%2C+%E5%AE%9C%E8%98%AD%E7%B8%A3%E7%BE%85%E6%9D%B1%E9%8E%AE%E5%AF%8C%E8%BE%B2%E8%B7%AF%E4%B8%89%E6%AE%B5169%E8%99%9F%2C+Luodong%2C+Yilan) |
 | 173 | 咖啡瑪榭 (Cafe Marche) | 咖啡廳／甜點 | 台北市中山區中山北路二段16巷15號一樓，捷運中山站4號出口 | 2026-11-23 00:03 | 2023-03-21 | [開啟](https://www.google.com/maps/search/?api=1&query=%E5%92%96%E5%95%A1%E7%91%AA%E6%A6%AD+%28Cafe+Marche%29%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E4%B8%AD%E5%B1%B1%E5%8C%97%E8%B7%AF%E4%BA%8C%E6%AE%B516%E5%B7%B715%E8%99%9F%E4%B8%80%E6%A8%93%2C+MRT+Zhongshan+Exit+4) |
@@ -1122,7 +1122,7 @@
 - 貼文發布日期：2026-10-03 05:30:52（原貼文的發布日期，非收藏加入日期）
 - 重點：壽喜燒（有海膽）；營業時間 台南 12:00–14:30／17:30–22:00，台北 12:00–14:30／17:30–22:30；電話 062131558（台南）、02 2708 6835（台北）；被形容為很難訂位
 - Instagram：[https://www.instagram.com/reel/DeCD-Z3t4vV/](https://www.instagram.com/reel/DeCD-Z3t4vV/)
-- Google Maps：—
+- Google Maps：[台南](https://www.google.com/maps/search/?api=1&query=%E6%A9%8B%E5%B1%B1.%E9%B5%B2%E9%82%B8%E5%A3%BD%E5%96%9C%E7%87%92%2C%20%E5%8F%B0%E5%8D%97%E5%B8%82%E5%8D%97%E5%8D%80%E9%AB%94%E8%82%B2%E8%B7%AF9%E8%99%9F)／[台北](https://www.google.com/maps/search/?api=1&query=%E6%A9%8B%E5%B1%B1.%E5%A3%BD%E5%96%9C%E7%87%92%20%E3%81%99%E3%81%8D%E7%84%BC%E3%81%8D%E5%B0%88%E9%96%80%E5%BA%97%20%E3%81%AF%E3%81%97%E3%82%84%E3%81%BE%2C%20106%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E9%BE%8D%E5%9C%96%E9%87%8C%E7%91%9E%E5%AE%89%E8%A1%97120%E5%B7%B73%E5%BC%841%E8%99%9F)
 
 ### 85. 正谷家-韓式火鍋.一隻雞.料理 (Korean soy-marinated crab/shrimp, hot pot, one-chicken)
 
@@ -1982,7 +1982,7 @@
 - 貼文發布日期：2025-03-05 01:49:19（原貼文發布日期，非收藏加入日期）
 - 重點：1）可口豬肝湯麻醬麵——大安路一段51巷3號；2）米樂拾穗——復興南路一段107巷32號；3）鶴茶樓（連鎖店；奶蓋飲品，第二杯半價）；4）無名蘿蔔絲餅——復興南路一段135巷3號；5）上善豆家——復興南路一段107巷16號
 - Instagram：[https://www.instagram.com/reel/DG0CnJOzBXi/](https://www.instagram.com/reel/DG0CnJOzBXi/)
-- Google Maps：—
+- Google Maps：[可口豬肝湯麻醬麵](https://www.google.com/maps/search/?api=1&query=%E5%8F%AF%E5%8F%A3%E8%B1%AC%E8%82%9D%E6%B9%AF%E9%BA%BB%E9%86%AC%E9%BA%B5%2C%20%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%A4%A7%E5%AE%89%E8%B7%AF%E4%B8%80%E6%AE%B551%E5%B7%B73%E8%99%9F)／[米樂拾穗](https://www.google.com/maps/search/?api=1&query=%E7%B1%B3%E6%A8%82%E6%8B%BE%E7%A9%97%2C%20%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BE%A9%E8%88%88%E5%8D%97%E8%B7%AF%E4%B8%80%E6%AE%B5107%E5%B7%B732%E8%99%9F)／[無名蘿蔔絲餅](https://www.google.com/maps/search/?api=1&query=%E7%84%A1%E5%90%8D%E8%98%BF%E8%94%94%E7%B5%B2%E9%A4%85%2C%20%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BE%A9%E8%88%88%E5%8D%97%E8%B7%AF%E4%B8%80%E6%AE%B5135%E5%B7%B73%E8%99%9F)／[上善豆家](https://www.google.com/maps/search/?api=1&query=%E4%B8%8A%E5%96%84%E8%B1%86%E5%AE%B6%2C%20%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BE%A9%E8%88%88%E5%8D%97%E8%B7%AF%E4%B8%80%E6%AE%B5107%E5%B7%B716%E8%99%9F)（鶴茶樓：連鎖店，未提供分店地址，未附連結）
 
 ### 171. 門前隱味牛肉麵
 
