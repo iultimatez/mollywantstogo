@@ -2,15 +2,20 @@ import { useCallback, useEffect, useState } from 'react';
 import mollyPlacesData from '../data/mollyPlaces.json';
 import { Place } from '../types';
 
-const STORAGE_KEY = 'molly-wants-to-go:places:v8';
-const DELETED_IDS_KEY = 'molly-wants-to-go:deleted:v8';
+const STORAGE_KEY = 'molly-wants-to-go:places:v9';
+const DELETED_IDS_KEY = 'molly-wants-to-go:deleted:v9';
 const PREV_STORAGE_KEYS = [
+  'molly-wants-to-go:places:v8',
   'molly-wants-to-go:places:v7',
   'molly-wants-to-go:places:v6',
   'molly-wants-to-go:places:v5',
 ];
 
 const DEFAULT_PLACES: Place[] = mollyPlacesData as Place[];
+
+function isCustomPlaceId(id: string): boolean {
+  return id.startsWith('place-');
+}
 
 function loadDeletedIds(): Set<string> {
   try {
@@ -33,12 +38,21 @@ function saveDeletedIds(ids: Set<string>) {
 
 function hydrateFromDefaults(stored: Place[], deletedIds: Set<string>): Place[] {
   const storedById = new Map(stored.map((item) => [item.id, item]));
-  const customPlaces = stored.filter((item) => !item.id.startsWith('molly-'));
+  const storedByUrl = new Map<string, Place>();
+  for (const item of stored) {
+    if (isCustomPlaceId(item.id)) continue;
+    for (const url of item.instagramUrls ?? []) {
+      if (!storedByUrl.has(url)) storedByUrl.set(url, item);
+    }
+  }
+  const customPlaces = stored.filter((item) => isCustomPlaceId(item.id));
 
   const mergedDefaults: Place[] = [];
   for (const fresh of DEFAULT_PLACES) {
     if (deletedIds.has(fresh.id)) continue;
-    const existing = storedById.get(fresh.id);
+    const existing =
+      storedById.get(fresh.id) ??
+      (fresh.instagramUrls ?? []).map((u) => storedByUrl.get(u)).find(Boolean);
     if (!existing) {
       // Newly added place from updated collection markdown
       mergedDefaults.push(fresh);
@@ -49,6 +63,7 @@ function hydrateFromDefaults(stored: Place[], deletedIds: Set<string>): Place[] 
     mergedDefaults.push({
       ...fresh,
       ...existing,
+      id: fresh.id,
       // Always pull in fresher collection metadata & newly geocoded pins
       sourceNumbers: fresh.sourceNumbers,
       postedAt: fresh.postedAt ?? existing.postedAt,
@@ -98,7 +113,7 @@ function loadInitialPlaces(): Place[] {
           for (const url of item.instagramUrls ?? []) {
             if (isVisited) visitedByUrl.set(url, true);
           }
-          if (!item.id.startsWith('molly-')) {
+          if (isCustomPlaceId(item.id)) {
             customPlaces.push(item);
           }
         }
@@ -149,7 +164,7 @@ export function usePlaces() {
   }, []);
 
   const deletePlace = useCallback((id: string) => {
-    if (id.startsWith('molly-')) {
+    if (!isCustomPlaceId(id)) {
       const deleted = loadDeletedIds();
       deleted.add(id);
       saveDeletedIds(deleted);

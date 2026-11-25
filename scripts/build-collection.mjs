@@ -604,9 +604,21 @@ const mergedPlaces = Array.from(mergedMap.values()).map(({ key, items }) => {
       /^(貼文|原文|帖子|未提及|—)/.test(primary.location) &&
       region === 'other');
 
+  const igEntries = items
+    .map((it) => ({
+      code: extractIgShortcode(it.igUrl),
+      postedAt: it.postedAt ? it.postedAt.slice(0, 10) : '9999-99-99',
+    }))
+    .filter((e) => e.code);
+  igEntries.sort(
+    (a, b) => a.postedAt.localeCompare(b.postedAt) || a.code.localeCompare(b.code)
+  );
+  const igIds = Array.from(new Set(igEntries.map((e) => e.code)));
+  const baseId = igIds[0] || `noig-${shortHash(key)}`;
+
   return {
-    id: `molly-${shortHash(key)}`,
-    legacyId: `molly-${primary.num}`,
+    id: baseId,
+    igIds,
     mergeKey: key,
     sourceNumbers: items.map((i) => i.num).sort((a, b) => a - b),
     savedCount: items.length,
@@ -629,31 +641,55 @@ const mergedPlaces = Array.from(mergedMap.values()).map(({ key, items }) => {
   };
 });
 
+// Disambiguate rare cases where two distinct places share the exact same IG shortcode
+const placesByBaseId = new Map();
+for (const p of mergedPlaces) {
+  if (!placesByBaseId.has(p.id)) placesByBaseId.set(p.id, []);
+  placesByBaseId.get(p.id).push(p);
+}
+for (const [baseId, group] of placesByBaseId.entries()) {
+  if (group.length <= 1) continue;
+  group.sort((a, b) => a.mergeKey.localeCompare(b.mergeKey));
+  for (let i = 1; i < group.length; i++) {
+    group[i].id = `${baseId}-${shortHash(group[i].mergeKey).slice(0, 4)}`;
+  }
+}
+
 async function main() {
-  // Load geocode cache (supports both new stable mergeKey keys and migrating legacy molly-<num> keys)
+  // Load geocode cache keyed by IG ID (also migrates prior mergeKey-keyed cache entries)
   const rawCache = fs.existsSync(CACHE_JSON)
     ? JSON.parse(fs.readFileSync(CACHE_JSON, 'utf8'))
     : {};
 
   const cache = {};
   let cacheDirty = false;
+  const activeIds = new Set(mergedPlaces.map((p) => p.id));
 
-  // Keep any already-migrated stable keys
+  // Keep existing IG-ID-keyed entries (not old mergeKey or molly-N formats)
+  const isLegacyKey = (k) =>
+    /^(molly-\d+|alias:|addr:|gm:|ig:|name:)/.test(k);
   for (const [k, v] of Object.entries(rawCache)) {
-    if (!/^molly-\d+$/.test(k)) {
+    if (!isLegacyKey(k)) {
       cache[k] = v;
-    }
-  }
-
-  // Migrate any legacy molly-<num> keys onto their stable mergeKey
-  for (const p of mergedPlaces) {
-    if (!cache[p.mergeKey] && rawCache[p.legacyId]) {
-      cache[p.mergeKey] = rawCache[p.legacyId];
+    } else {
       cacheDirty = true;
     }
   }
-  if (Object.keys(rawCache).some((k) => /^molly-\d+$/.test(k))) {
-    cacheDirty = true;
+
+  // Migrate or resolve cached coordinates onto each place's canonical IG ID
+  for (const p of mergedPlaces) {
+    if (cache[p.id]) continue;
+    // Check if any alternate IG ID in this merged place already has a cache entry
+    const altIgHit = p.igIds.find((code) => cache[code] && !activeIds.has(code));
+    if (altIgHit) {
+      cache[p.id] = cache[altIgHit];
+      cacheDirty = true;
+      continue;
+    }
+    if (rawCache[p.mergeKey]) {
+      cache[p.id] = rawCache[p.mergeKey];
+      cacheDirty = true;
+    }
   }
 
   // Geocode any cache misses (e.g., newly added places pushed by Meta Muse)
@@ -662,7 +698,7 @@ async function main() {
     const misses = mergedPlaces.filter((p) => {
       const override = getManualOverride(p);
       if (override?.lat !== undefined && override?.lng !== undefined) return false;
-      if (cache[p.mergeKey]) return false;
+      if (cache[p.id]) return false;
       return shouldAttemptGeocode(p);
     });
 
@@ -671,7 +707,7 @@ async function main() {
       for (const p of misses) {
         const result = await geocodePlace(p);
         if (result) {
-          cache[p.mergeKey] = result;
+          cache[p.id] = result;
           cacheDirty = true;
           newlyGeocoded++;
           console.log(
@@ -691,7 +727,7 @@ async function main() {
 
   const coordCounts = new Map();
   const finalPlaces = mergedPlaces.map((p) => {
-    const geo = cache[p.mergeKey];
+    const geo = cache[p.id];
     let lat = geo ? geo.lat : null;
     let lng = geo ? geo.lng : null;
     let locationPrecision = geo ? geo.precision : 'none';
