@@ -4,7 +4,7 @@ import path from 'node:path';
 const positionalArgs = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 const INPUT_MD =
   positionalArgs[0] ||
-  '/Users/thomas/Downloads/mollys-want-to-go-collection (1).md';
+  path.resolve('src/data/mollys-want-to-go-collection.md');
 const OUTPUT_JSON = path.resolve('src/data/mollyPlaces.json');
 const CACHE_JSON = path.resolve('scripts/geocode-cache.json');
 
