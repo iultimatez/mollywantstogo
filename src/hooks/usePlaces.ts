@@ -2,56 +2,113 @@ import { useCallback, useEffect, useState } from 'react';
 import mollyPlacesData from '../data/mollyPlaces.json';
 import { Place } from '../types';
 
-const STORAGE_KEY = 'molly-wants-to-go:places:v7';
+const STORAGE_KEY = 'molly-wants-to-go:places:v8';
+const DELETED_IDS_KEY = 'molly-wants-to-go:deleted:v8';
 const PREV_STORAGE_KEYS = [
+  'molly-wants-to-go:places:v7',
   'molly-wants-to-go:places:v6',
   'molly-wants-to-go:places:v5',
 ];
 
 const DEFAULT_PLACES: Place[] = mollyPlacesData as Place[];
-const DEFAULT_BY_ID = new Map(DEFAULT_PLACES.map((p) => [p.id, p]));
 
-function hydrateFromDefaults(stored: Place[]): Place[] {
-  return stored.map((item) => {
-    const fresh = DEFAULT_BY_ID.get(item.id);
-    if (!fresh) return item;
-    return {
+function loadDeletedIds(): Set<string> {
+  try {
+    const raw = window.localStorage.getItem(DELETED_IDS_KEY);
+    if (!raw) return new Set();
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? new Set(parsed as string[]) : new Set();
+  } catch {
+    return new Set();
+  }
+}
+
+function saveDeletedIds(ids: Set<string>) {
+  try {
+    window.localStorage.setItem(DELETED_IDS_KEY, JSON.stringify(Array.from(ids)));
+  } catch {
+    // Ignore storage quota errors
+  }
+}
+
+function hydrateFromDefaults(stored: Place[], deletedIds: Set<string>): Place[] {
+  const storedById = new Map(stored.map((item) => [item.id, item]));
+  const customPlaces = stored.filter((item) => !item.id.startsWith('molly-'));
+
+  const mergedDefaults: Place[] = [];
+  for (const fresh of DEFAULT_PLACES) {
+    if (deletedIds.has(fresh.id)) continue;
+    const existing = storedById.get(fresh.id);
+    if (!existing) {
+      // Newly added place from updated collection markdown
+      mergedDefaults.push(fresh);
+      continue;
+    }
+    const existingReels = existing.reels ?? [];
+    const freshReels = fresh.reels ?? [];
+    mergedDefaults.push({
       ...fresh,
-      ...item,
-      // Always backfill newly imported collection fields when missing
-      postedAt: item.postedAt ?? fresh.postedAt,
-      savedAt: item.savedAt ?? fresh.savedAt,
-      reels: item.reels && item.reels.length > 0 ? item.reels : fresh.reels,
-    };
-  });
+      ...existing,
+      // Always pull in fresher collection metadata & newly geocoded pins
+      sourceNumbers: fresh.sourceNumbers,
+      postedAt: fresh.postedAt ?? existing.postedAt,
+      savedAt: fresh.savedAt ?? existing.savedAt,
+      reels: freshReels.length >= existingReels.length ? freshReels : existingReels,
+      instagramUrls:
+        (fresh.instagramUrls?.length ?? 0) >= (existing.instagramUrls?.length ?? 0)
+          ? fresh.instagramUrls
+          : existing.instagramUrls,
+      savedCount: Math.max(fresh.savedCount ?? 1, existing.savedCount ?? 1),
+      lat: existing.lat ?? fresh.lat,
+      lng: existing.lng ?? fresh.lng,
+      locationPrecision:
+        existing.lat !== null && existing.lat !== undefined
+          ? existing.locationPrecision
+          : fresh.locationPrecision,
+    });
+  }
+
+  return [...customPlaces, ...mergedDefaults];
 }
 
 function loadInitialPlaces(): Place[] {
   try {
+    const deletedIds = loadDeletedIds();
     const raw = window.localStorage.getItem(STORAGE_KEY);
     if (raw) {
       const parsed = JSON.parse(raw);
       if (Array.isArray(parsed) && parsed.length > 0) {
-        return hydrateFromDefaults(parsed as Place[]);
+        return hydrateFromDefaults(parsed as Place[], deletedIds);
       }
     }
-    // Migrate visited flags & custom places from prior versions while pulling in new date metadata
+    // Migrate visited flags & custom places from prior versions (matching by URL or name since IDs became stable hashes)
     for (const prevKey of PREV_STORAGE_KEYS) {
       const prevRaw = window.localStorage.getItem(prevKey);
       if (!prevRaw) continue;
       const prev = JSON.parse(prevRaw);
       if (Array.isArray(prev)) {
         const visitedById = new Map<string, boolean>();
+        const visitedByUrl = new Map<string, boolean>();
+        const visitedByName = new Map<string, boolean>();
         const customPlaces: Place[] = [];
         for (const item of prev as Place[]) {
-          visitedById.set(item.id, Boolean(item.visited));
+          const isVisited = Boolean(item.visited);
+          visitedById.set(item.id, isVisited);
+          visitedByName.set(item.name, isVisited);
+          for (const url of item.instagramUrls ?? []) {
+            if (isVisited) visitedByUrl.set(url, true);
+          }
           if (!item.id.startsWith('molly-')) {
             customPlaces.push(item);
           }
         }
         const mergedDefaults = DEFAULT_PLACES.map((p) => ({
           ...p,
-          visited: visitedById.get(p.id) ?? p.visited,
+          visited:
+            visitedById.get(p.id) ??
+            ((p.instagramUrls ?? []).some((u) => visitedByUrl.get(u)) ||
+              visitedByName.get(p.name) ||
+              p.visited),
         }));
         return [...customPlaces, ...mergedDefaults];
       }
@@ -92,6 +149,11 @@ export function usePlaces() {
   }, []);
 
   const deletePlace = useCallback((id: string) => {
+    if (id.startsWith('molly-')) {
+      const deleted = loadDeletedIds();
+      deleted.add(id);
+      saveDeletedIds(deleted);
+    }
     setPlaces((prev) => prev.filter((place) => place.id !== id));
   }, []);
 
@@ -104,6 +166,7 @@ export function usePlaces() {
   }, []);
 
   const resetToDefaults = useCallback(() => {
+    saveDeletedIds(new Set());
     setPlaces(DEFAULT_PLACES);
   }, []);
 

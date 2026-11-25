@@ -1,16 +1,27 @@
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 
-const positionalArgs = process.argv.slice(2).filter((a) => !a.startsWith('--'));
+const rawArgs = process.argv.slice(2);
+const NO_GEOCODE = rawArgs.includes('--no-geocode');
+const positionalArgs = rawArgs.filter((a) => !a.startsWith('--'));
 const INPUT_MD =
   positionalArgs[0] ||
   path.resolve('src/data/mollys-want-to-go-collection.md');
 const OUTPUT_JSON = path.resolve('src/data/mollyPlaces.json');
 const CACHE_JSON = path.resolve('scripts/geocode-cache.json');
 
+const ARCGIS_URL =
+  'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates';
+const NOMINATIM_URL = 'https://nominatim.openstreetmap.org/search';
+
 const md = fs.readFileSync(INPUT_MD, 'utf8');
 const detailSection = md.slice(md.indexOf('## 詳細內容'));
 const blocks = detailSection.split(/\n### /).slice(1);
+
+function shortHash(input) {
+  return crypto.createHash('sha1').update(input).digest('hex').slice(0, 10);
+}
 
 function extractField(lines, prefix) {
   const line = lines.find((l) => l.startsWith(`- ${prefix}`));
@@ -21,6 +32,13 @@ function extractField(lines, prefix) {
 
 function extractLink(val) {
   const m = val.match(/\((https?:\/\/[^)]+)\)/);
+  return m ? m[1] : '';
+}
+
+function extractIgShortcode(url) {
+  const m = (url || '').match(
+    /instagram\.com\/(?:p|reel|tv)\/([A-Za-z0-9_-]+)/i
+  );
   return m ? m[1] : '';
 }
 
@@ -134,6 +152,7 @@ const VENUE_ALIASES = [
   { key: 'hong-mi-zhou', test: (i) => /紅米砂鍋粥/.test(i.name) },
 ];
 
+// Stable merge key independent of item numbering (immune to prepending new posts)
 function getMergeKey(item) {
   for (const alias of VENUE_ALIASES) {
     if (alias.test(item)) return `alias:${alias.key}`;
@@ -146,7 +165,11 @@ function getMergeKey(item) {
   if (item.gmQuery) {
     return `gm:${normalizeText(item.gmQuery)}`;
   }
-  return `single:${item.num}`;
+  const igCode = extractIgShortcode(item.igUrl);
+  if (igCode) {
+    return `ig:${igCode}`;
+  }
+  return `name:${normalizeText(item.name).slice(0, 32)}`;
 }
 
 function classifyCategory(rawCat, name, highlights) {
@@ -256,6 +279,251 @@ function extractDisplayLocation(location) {
   };
 }
 
+// Stable manual overrides (matched by venue name/address rather than item number)
+const MANUAL_OVERRIDES = [
+  {
+    test: (p) => /橋山/.test(p.name) && /台南/.test(p.address),
+    override: {
+      region: 'south_tw',
+      regionLabel: '台南・南部 South TW',
+      name: '橋山.鵲邸壽喜燒 (台南) & 橋山壽喜燒',
+    },
+  },
+  {
+    test: (p) => /新東亞水産物|Shin Dong-A/i.test(p.name),
+    override: { lat: 35.0968, lng: 129.0315, locationPrecision: 'exact' },
+  },
+  {
+    test: (p) => /Shock燒肉/i.test(p.name),
+    override: { lat: 25.0135, lng: 121.2149, locationPrecision: 'area' },
+  },
+  {
+    test: (p) => /中和緬甸街|華新街/.test(`${p.name} ${p.address}`),
+    override: { lat: 24.9839, lng: 121.5094, locationPrecision: 'exact' },
+  },
+  {
+    test: (p) => /水剌醬蟹|Sura Ganjang/i.test(p.name),
+    override: { lat: 37.5621, lng: 126.9854, locationPrecision: 'exact' },
+  },
+  {
+    test: (p) => /一片里脊|Ilpyeon Deungsim/i.test(p.name),
+    override: { lat: 37.56228, lng: 126.98558, locationPrecision: 'exact' },
+  },
+  {
+    test: (p) => /Zakynthos|札金索斯/i.test(`${p.name} ${p.address}`),
+    override: { lat: 37.787, lng: 20.8999, locationPrecision: 'area' },
+  },
+  {
+    test: (p) =>
+      /Egypt|埃及/i.test(`${p.name} ${p.address}`) &&
+      /行程|itinerary/i.test(`${p.name} ${p.rawCategory}`),
+    override: { lat: 30.0444, lng: 31.2357, locationPrecision: 'area' },
+  },
+  {
+    test: (p) => /亞庇/.test(`${p.name} ${p.address}`),
+    override: { lat: 6.0005, lng: 116.0125, locationPrecision: 'area' },
+  },
+  {
+    test: (p) => /雲南/.test(`${p.name} ${p.address}`),
+    override: { lat: 25.6065, lng: 100.2676, locationPrecision: 'area' },
+  },
+];
+
+function getManualOverride(place) {
+  for (const entry of MANUAL_OVERRIDES) {
+    if (entry.test(place)) return entry.override;
+  }
+  return undefined;
+}
+
+// --- Geocoding helpers (ArcGIS primary + Nominatim fallback) ---
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function cleanAddressForGeocode(addr) {
+  if (!addr) return '';
+  let s = addr
+    .split(/[；;]/)[0]
+    .replace(/（[^）]*）/g, '')
+    .replace(/\([^)]*\)/g, '')
+    .replace(/^\d{3,5}\s*(?=[臺台])/, '')
+    .replace(/^〒\d{3}-\d{4}\s*/, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+  // Strip trailing floor info that sometimes confuses geocoders
+  s = s.replace(/\s*(\d+\s*[樓層F]|B\d+|一樓|二樓|三樓|後棟)$/i, '').trim();
+  return s;
+}
+
+function shouldAttemptGeocode(place) {
+  if (place.isNonPlace) return false;
+  const addr = (place.address || '').trim();
+  const hasGm = Boolean(place.googleMapsUrl && place.gmQuery);
+  if (!addr && !hasGm) return false;
+  if (/^—|^貼文未提及|^貼文中未提及|^帖子中未提及|^原文未說明|^未提及/.test(addr) && !hasGm) {
+    return false;
+  }
+  if (/未提供具體|未提及確切|確切站點如下|僅來自標籤；未提及地址/.test(addr) && !hasGm) {
+    return false;
+  }
+  return true;
+}
+
+function buildGeocodeQueries(place) {
+  const queries = [];
+  const pushUnique = (q) => {
+    const trimmed = (q || '').trim();
+    if (trimmed.length >= 2 && !queries.includes(trimmed)) {
+      queries.push(trimmed);
+    }
+  };
+
+  const cleanedAddr = cleanAddressForGeocode(place.address);
+  if (cleanedAddr && !/^—|^貼文|^帖子|^原文|^未提及/.test(cleanedAddr)) {
+    pushUnique(cleanedAddr);
+  }
+
+  if (place.gmQuery) {
+    // Often formatted as "Venue Name, Street Address" -> try street address part first, then full query
+    const commaIdx = place.gmQuery.indexOf(',');
+    if (commaIdx > 0) {
+      const afterComma = cleanAddressForGeocode(place.gmQuery.slice(commaIdx + 1));
+      if (afterComma.length >= 4) pushUnique(afterComma);
+    }
+    pushUnique(place.gmQuery);
+  }
+
+  return queries;
+}
+
+function expectedCountriesForRegion(region) {
+  if (['taipei', 'taichung', 'south_tw', 'other_tw'].includes(region)) {
+    return { arcgis: ['TWN'], nominatim: ['tw'] };
+  }
+  if (region === 'japan') return { arcgis: ['JPN'], nominatim: ['jp'] };
+  if (region === 'korea') return { arcgis: ['KOR'], nominatim: ['kr'] };
+  return null;
+}
+
+const EXACT_ADDR_TYPES = new Set([
+  'PointAddress',
+  'Subaddress',
+  'StreetAddress',
+  'StreetAddressExt',
+  'StreetInt',
+  'POI',
+  'BuildingName',
+]);
+
+async function geocodeWithArcGIS(query, region) {
+  const params = new URLSearchParams({
+    f: 'json',
+    singleLine: query,
+    maxLocations: '3',
+    outFields: 'Match_addr,Addr_type,Country',
+  });
+  const res = await fetch(`${ARCGIS_URL}?${params.toString()}`, {
+    signal: AbortSignal.timeout(10000),
+  });
+  if (!res.ok) return null;
+  const data = await res.json();
+  const candidates = Array.isArray(data?.candidates) ? data.candidates : [];
+  const expected = expectedCountriesForRegion(region);
+
+  for (const c of candidates) {
+    if (!c?.location || typeof c.location.y !== 'number' || typeof c.location.x !== 'number') {
+      continue;
+    }
+    if ((c.score ?? 0) < 75) continue;
+    const country = c.attributes?.Country;
+    if (expected && country && !expected.arcgis.includes(country)) {
+      continue;
+    }
+    const addrType = c.attributes?.Addr_type || '';
+    const hasStreetNum = /[號号]|\b\d{1,4}\b/.test(query);
+    const precision =
+      EXACT_ADDR_TYPES.has(addrType) || (c.score >= 90 && hasStreetNum)
+        ? 'exact'
+        : 'area';
+    return {
+      lat: Number(c.location.y.toFixed(6)),
+      lng: Number(c.location.x.toFixed(6)),
+      score: Number((c.score ?? 0).toFixed(2)),
+      matched: c.attributes?.Match_addr || c.address || '',
+      source: 'arcgis',
+      precision,
+      queryUsed: query,
+    };
+  }
+  return null;
+}
+
+let lastNominatimAt = 0;
+async function geocodeWithNominatim(query, region) {
+  const wait = Math.max(0, 1100 - (Date.now() - lastNominatimAt));
+  if (wait > 0) await sleep(wait);
+  lastNominatimAt = Date.now();
+
+  const params = new URLSearchParams({
+    format: 'json',
+    addressdetails: '1',
+    limit: '2',
+    q: query,
+  });
+  const res = await fetch(`${NOMINATIM_URL}?${params.toString()}`, {
+    headers: { 'User-Agent': 'molly-wants-to-go-builder/1.0' },
+    signal: AbortSignal.timeout(10000),
+  });
+  if (!res.ok) return null;
+  const results = await res.json();
+  if (!Array.isArray(results) || results.length === 0) return null;
+  const expected = expectedCountriesForRegion(region);
+
+  for (const r of results) {
+    const cc = r.address?.country_code?.toLowerCase();
+    if (expected && cc && !expected.nominatim.includes(cc)) {
+      continue;
+    }
+    const lat = Number(r.lat);
+    const lng = Number(r.lon);
+    if (!Number.isFinite(lat) || !Number.isFinite(lng)) continue;
+    const hasStreetNum = /[號号]|\b\d{1,4}\b/.test(query);
+    return {
+      lat: Number(lat.toFixed(6)),
+      lng: Number(lng.toFixed(6)),
+      score: 85,
+      matched: r.display_name || '',
+      source: 'nominatim',
+      precision: hasStreetNum ? 'exact' : 'area',
+      queryUsed: query,
+    };
+  }
+  return null;
+}
+
+async function geocodePlace(place) {
+  const queries = buildGeocodeQueries(place);
+  for (const q of queries) {
+    try {
+      const hit = await geocodeWithArcGIS(q, place.region);
+      if (hit) return hit;
+    } catch (err) {
+      console.warn(`ArcGIS geocode failed for "${place.name}" (${q}): ${err.message}`);
+    }
+  }
+  for (const q of queries) {
+    try {
+      const hit = await geocodeWithNominatim(q, place.region);
+      if (hit) return hit;
+    } catch (err) {
+      console.warn(`Nominatim geocode failed for "${place.name}" (${q}): ${err.message}`);
+    }
+  }
+  return null;
+}
+
 // Merge duplicates
 const mergedMap = new Map();
 for (const item of rawItems) {
@@ -337,7 +605,8 @@ const mergedPlaces = Array.from(mergedMap.values()).map(({ key, items }) => {
       region === 'other');
 
   return {
-    id: `molly-${primary.num}`,
+    id: `molly-${shortHash(key)}`,
+    legacyId: `molly-${primary.num}`,
     mergeKey: key,
     sourceNumbers: items.map((i) => i.num).sort((a, b) => a - b),
     savedCount: items.length,
@@ -360,86 +629,129 @@ const mergedPlaces = Array.from(mergedMap.values()).map(({ key, items }) => {
   };
 });
 
-// Load geocode cache
-const cache = fs.existsSync(CACHE_JSON)
-  ? JSON.parse(fs.readFileSync(CACHE_JSON, 'utf8'))
-  : {};
+async function main() {
+  // Load geocode cache (supports both new stable mergeKey keys and migrating legacy molly-<num> keys)
+  const rawCache = fs.existsSync(CACHE_JSON)
+    ? JSON.parse(fs.readFileSync(CACHE_JSON, 'utf8'))
+    : {};
 
-// Verified manual overrides for addresses that needed disambiguation
-const MANUAL_OVERRIDES = {
-  'molly-84': {
-    region: 'south_tw',
-    regionLabel: '台南・南部 South TW',
-    name: '橋山.鵲邸壽喜燒 (台南) & 橋山壽喜燒',
-  },
-  'molly-89': { lat: 35.0968, lng: 129.0315, locationPrecision: 'exact' },
-  'molly-189': { lat: 25.0135, lng: 121.2149, locationPrecision: 'area' },
-  'molly-201': { lat: 24.9839, lng: 121.5094, locationPrecision: 'exact' },
-  'molly-107': { lat: 37.5621, lng: 126.9854, locationPrecision: 'exact' },
-  'molly-207': { lat: 37.56228, lng: 126.98558, locationPrecision: 'exact' },
-  'molly-28': { lat: 37.787, lng: 20.8999, locationPrecision: 'area' },
-  'molly-33': { lat: 30.0444, lng: 31.2357, locationPrecision: 'area' },
-  'molly-179': { lat: 6.0005, lng: 116.0125, locationPrecision: 'area' },
-  'molly-243': { lat: 25.6065, lng: 100.2676, locationPrecision: 'area' },
-};
+  const cache = {};
+  let cacheDirty = false;
 
-const coordCounts = new Map();
-const finalPlaces = mergedPlaces.map((p) => {
-  const geo = cache[p.id];
-  let lat = geo ? geo.lat : null;
-  let lng = geo ? geo.lng : null;
-  let locationPrecision = geo ? geo.precision : 'none';
-
-  const override = MANUAL_OVERRIDES[p.id];
-  if (override?.lat !== undefined && override?.lng !== undefined) {
-    lat = override.lat;
-    lng = override.lng;
-    locationPrecision = override.locationPrecision || 'exact';
-  }
-
-  if (lat !== null && lng !== null) {
-    const coordKey = `${lat.toFixed(4)},${lng.toFixed(4)}`;
-    const count = coordCounts.get(coordKey) || 0;
-    if (count > 0) {
-      const angle = count * 2.39996;
-      const radius = 0.00022 * Math.ceil(count / 4);
-      lat = Number((lat + Math.cos(angle) * radius).toFixed(6));
-      lng = Number((lng + Math.sin(angle) * radius).toFixed(6));
+  // Keep any already-migrated stable keys
+  for (const [k, v] of Object.entries(rawCache)) {
+    if (!/^molly-\d+$/.test(k)) {
+      cache[k] = v;
     }
-    coordCounts.set(coordKey, count + 1);
   }
 
-  return {
-    id: p.id,
-    name: override?.name || p.name,
-    neighborhood: p.neighborhood,
-    city: p.city || override?.regionLabel || p.regionLabel,
-    address: p.address,
-    region: override?.region || p.region,
-    regionLabel: override?.regionLabel || p.regionLabel,
-    category: p.category,
-    rawCategory: p.rawCategory,
-    note: p.note,
-    lat,
-    lng,
-    locationPrecision,
-    visited: false,
-    savedCount: p.savedCount,
-    sourceNumbers: p.sourceNumbers,
-    savedAt: p.savedAt,
-    postedAt: p.postedAt,
-    reels: p.reels,
-    instagramUrls: p.instagramUrls,
-    googleMapsUrl: p.googleMapsUrl,
-    createdAt: p.postedAt
-      ? new Date(`${p.postedAt}T00:00:00Z`).toISOString()
-      : new Date(Date.UTC(2026, 10, 23) - p.sourceNumbers[0] * 3600 * 1000).toISOString(),
-  };
-});
+  // Migrate any legacy molly-<num> keys onto their stable mergeKey
+  for (const p of mergedPlaces) {
+    if (!cache[p.mergeKey] && rawCache[p.legacyId]) {
+      cache[p.mergeKey] = rawCache[p.legacyId];
+      cacheDirty = true;
+    }
+  }
+  if (Object.keys(rawCache).some((k) => /^molly-\d+$/.test(k))) {
+    cacheDirty = true;
+  }
 
-fs.writeFileSync(OUTPUT_JSON, JSON.stringify(finalPlaces, null, 2));
-const withPosted = finalPlaces.filter((p) => p.postedAt).length;
-const withSaved = finalPlaces.filter((p) => p.savedAt).length;
-console.log(
-  `Wrote ${finalPlaces.length} places to ${OUTPUT_JSON} (${finalPlaces.filter((p) => p.lat !== null).length} pinned, ${withPosted} with post date, ${withSaved} with saved date).`
-);
+  // Geocode any cache misses (e.g., newly added places pushed by Meta Muse)
+  let newlyGeocoded = 0;
+  if (!NO_GEOCODE) {
+    const misses = mergedPlaces.filter((p) => {
+      const override = getManualOverride(p);
+      if (override?.lat !== undefined && override?.lng !== undefined) return false;
+      if (cache[p.mergeKey]) return false;
+      return shouldAttemptGeocode(p);
+    });
+
+    if (misses.length > 0) {
+      console.log(`Geocoding ${misses.length} new place(s) via ArcGIS/Nominatim...`);
+      for (const p of misses) {
+        const result = await geocodePlace(p);
+        if (result) {
+          cache[p.mergeKey] = result;
+          cacheDirty = true;
+          newlyGeocoded++;
+          console.log(
+            `  ✓ ${p.name} -> (${result.lat}, ${result.lng}) [${result.source}, ${result.precision}]`
+          );
+        } else {
+          console.log(`  – ${p.name}: no geocode match`);
+        }
+        await sleep(100);
+      }
+    }
+  }
+
+  if (cacheDirty) {
+    fs.writeFileSync(CACHE_JSON, JSON.stringify(cache, null, 2) + '\n');
+  }
+
+  const coordCounts = new Map();
+  const finalPlaces = mergedPlaces.map((p) => {
+    const geo = cache[p.mergeKey];
+    let lat = geo ? geo.lat : null;
+    let lng = geo ? geo.lng : null;
+    let locationPrecision = geo ? geo.precision : 'none';
+
+    const override = getManualOverride(p);
+    if (override?.lat !== undefined && override?.lng !== undefined) {
+      lat = override.lat;
+      lng = override.lng;
+      locationPrecision = override.locationPrecision || 'exact';
+    }
+
+    if (lat !== null && lng !== null) {
+      const coordKey = `${lat.toFixed(4)},${lng.toFixed(4)}`;
+      const count = coordCounts.get(coordKey) || 0;
+      if (count > 0) {
+        const angle = count * 2.39996;
+        const radius = 0.00022 * Math.ceil(count / 4);
+        lat = Number((lat + Math.cos(angle) * radius).toFixed(6));
+        lng = Number((lng + Math.sin(angle) * radius).toFixed(6));
+      }
+      coordCounts.set(coordKey, count + 1);
+    }
+
+    return {
+      id: p.id,
+      name: override?.name || p.name,
+      neighborhood: p.neighborhood,
+      city: p.city || override?.regionLabel || p.regionLabel,
+      address: p.address,
+      region: override?.region || p.region,
+      regionLabel: override?.regionLabel || p.regionLabel,
+      category: p.category,
+      rawCategory: p.rawCategory,
+      note: p.note,
+      lat,
+      lng,
+      locationPrecision,
+      visited: false,
+      savedCount: p.savedCount,
+      sourceNumbers: p.sourceNumbers,
+      savedAt: p.savedAt,
+      postedAt: p.postedAt,
+      reels: p.reels,
+      instagramUrls: p.instagramUrls,
+      googleMapsUrl: p.googleMapsUrl,
+      createdAt: p.postedAt
+        ? new Date(`${p.postedAt}T00:00:00Z`).toISOString()
+        : new Date(Date.UTC(2026, 10, 23) - p.sourceNumbers[0] * 3600 * 1000).toISOString(),
+    };
+  });
+
+  fs.writeFileSync(OUTPUT_JSON, JSON.stringify(finalPlaces, null, 2));
+  const withPosted = finalPlaces.filter((p) => p.postedAt).length;
+  const withSaved = finalPlaces.filter((p) => p.savedAt).length;
+  console.log(
+    `Wrote ${finalPlaces.length} places to ${OUTPUT_JSON} (${finalPlaces.filter((p) => p.lat !== null).length} pinned, ${newlyGeocoded} newly geocoded, ${withPosted} with post date, ${withSaved} with saved date).`
+  );
+}
+
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
