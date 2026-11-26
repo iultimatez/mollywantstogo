@@ -68,7 +68,7 @@ export function App() {
     deletePlace,
     toggleVisited,
     resetToDefaults,
-  } = usePlaces();
+  } = usePlaces(ENABLE_WRITE_FEATURES);
 
   const { canInstall, promptInstall } = usePwaInstall();
 

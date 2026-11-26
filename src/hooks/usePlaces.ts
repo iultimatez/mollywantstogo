@@ -136,16 +136,19 @@ function loadInitialPlaces(): Place[] {
 
 export type PlaceDraft = Omit<Place, 'id' | 'createdAt'>;
 
-export function usePlaces() {
-  const [places, setPlaces] = useState<Place[]>(loadInitialPlaces);
+export function usePlaces(persist = true) {
+  const [places, setPlaces] = useState<Place[]>(() =>
+    persist ? loadInitialPlaces() : DEFAULT_PLACES
+  );
 
   useEffect(() => {
+    if (!persist) return;
     try {
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify(places));
     } catch {
       // Ignore storage quota errors
     }
-  }, [places]);
+  }, [persist, places]);
 
   const addPlace = useCallback((draft: PlaceDraft): Place => {
     const newPlace: Place = {
@@ -163,14 +166,17 @@ export function usePlaces() {
     );
   }, []);
 
-  const deletePlace = useCallback((id: string) => {
-    if (!isCustomPlaceId(id)) {
-      const deleted = loadDeletedIds();
-      deleted.add(id);
-      saveDeletedIds(deleted);
-    }
-    setPlaces((prev) => prev.filter((place) => place.id !== id));
-  }, []);
+  const deletePlace = useCallback(
+    (id: string) => {
+      if (persist && !isCustomPlaceId(id)) {
+        const deleted = loadDeletedIds();
+        deleted.add(id);
+        saveDeletedIds(deleted);
+      }
+      setPlaces((prev) => prev.filter((place) => place.id !== id));
+    },
+    [persist]
+  );
 
   const toggleVisited = useCallback((id: string) => {
     setPlaces((prev) =>
@@ -181,9 +187,11 @@ export function usePlaces() {
   }, []);
 
   const resetToDefaults = useCallback(() => {
-    saveDeletedIds(new Set());
+    if (persist) {
+      saveDeletedIds(new Set());
+    }
     setPlaces(DEFAULT_PLACES);
-  }, []);
+  }, [persist]);
 
   return {
     places,
