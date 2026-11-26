@@ -342,91 +342,102 @@ export function MapView({
       {selectedPlace && !isPickingLocation && (
         <aside className="map-detail-card" aria-label={selectedPlace.name}>
           <div className="detail-card-header">
-            <div>
-              <div className="card-badges" style={{ marginBottom: 6 }}>
-                {onCategoryClick ? (
-                  <button
-                    type="button"
-                    className="category-badge category-badge-btn"
-                    style={
-                      {
-                        '--cat-color': CATEGORIES[selectedPlace.category].color,
-                        '--cat-bg': CATEGORIES[selectedPlace.category].softBg,
-                        '--cat-border':
-                          CATEGORIES[selectedPlace.category].borderColor,
-                      } as React.CSSProperties
-                    }
-                    title={`Filter by ${CATEGORIES[selectedPlace.category].label}`}
-                    aria-label={`Filter by ${CATEGORIES[selectedPlace.category].label}`}
-                    onClick={() => onCategoryClick(selectedPlace.category)}
-                  >
-                    {CATEGORIES[selectedPlace.category].shortLabel}
-                  </button>
-                ) : (
-                  <span
-                    className="category-badge"
-                    style={
-                      {
-                        '--cat-color': CATEGORIES[selectedPlace.category].color,
-                        '--cat-bg': CATEGORIES[selectedPlace.category].softBg,
-                        '--cat-border':
-                          CATEGORIES[selectedPlace.category].borderColor,
-                      } as React.CSSProperties
-                    }
-                  >
-                    {CATEGORIES[selectedPlace.category].shortLabel}
-                  </span>
-                )}
-                {selectedPlace.savedCount && selectedPlace.savedCount > 1 && (
-                  <span className="saved-count-badge">
-                    <Flame size={11} />
-                    Saved {selectedPlace.savedCount}×
-                  </span>
-                )}
-                {selectedPlace.locationPrecision === 'area' && (
-                  <span className="unpinned-badge">Approx. area</span>
-                )}
-                {onToggleVisited && selectedPlace.visited && (
-                  <span className="visited-badge">
-                    <Check size={11} strokeWidth={2.6} />
-                    Visited
-                  </span>
-                )}
-              </div>
-              <h3 className="detail-card-title">{selectedPlace.name}</h3>
-              <div className="place-location">
-                <MapPin size={12} />
-                <span>
-                  {selectedPlace.address && !/^—/.test(selectedPlace.address)
-                    ? selectedPlace.address
-                    : selectedPlace.neighborhood}
-                </span>
-              </div>
-              {(selectedPlace.postedAt || selectedPlace.savedAt) && (
-                <div className="detail-dates-row">
-                  {selectedPlace.postedAt && (
-                    <span className="detail-date-item">
-                      <Calendar size={11} />
-                      Posted {selectedPlace.postedAt}
+            <div className="detail-card-header-top">
+              <div className="detail-card-heading">
+                <div className="card-badges" style={{ marginBottom: 6 }}>
+                  {onCategoryClick ? (
+                    <button
+                      type="button"
+                      className="category-badge category-badge-btn"
+                      style={
+                        {
+                          '--cat-color':
+                            CATEGORIES[selectedPlace.category].color,
+                          '--cat-bg': CATEGORIES[selectedPlace.category].softBg,
+                          '--cat-border':
+                            CATEGORIES[selectedPlace.category].borderColor,
+                        } as React.CSSProperties
+                      }
+                      title={`Filter by ${CATEGORIES[selectedPlace.category].label}`}
+                      aria-label={`Filter by ${CATEGORIES[selectedPlace.category].label}`}
+                      onClick={() => onCategoryClick(selectedPlace.category)}
+                    >
+                      {CATEGORIES[selectedPlace.category].shortLabel}
+                    </button>
+                  ) : (
+                    <span
+                      className="category-badge"
+                      style={
+                        {
+                          '--cat-color':
+                            CATEGORIES[selectedPlace.category].color,
+                          '--cat-bg': CATEGORIES[selectedPlace.category].softBg,
+                          '--cat-border':
+                            CATEGORIES[selectedPlace.category].borderColor,
+                        } as React.CSSProperties
+                      }
+                    >
+                      {CATEGORIES[selectedPlace.category].shortLabel}
                     </span>
                   )}
-                  {selectedPlace.savedAt && (
-                    <span className="detail-date-item">
-                      Saved {selectedPlace.savedAt}
+                  {selectedPlace.savedCount && selectedPlace.savedCount > 1 && (
+                    <span className="saved-count-badge">
+                      <Flame size={11} />
+                      Saved {selectedPlace.savedCount}×
+                    </span>
+                  )}
+                  {selectedPlace.locationPrecision === 'area' && (
+                    <span className="unpinned-badge">Approx. area</span>
+                  )}
+                  {onToggleVisited && selectedPlace.visited && (
+                    <span className="visited-badge">
+                      <Check size={11} strokeWidth={2.6} />
+                      Visited
                     </span>
                   )}
                 </div>
-              )}
+                <h3 className="detail-card-title">{selectedPlace.name}</h3>
+              </div>
+
+              <button
+                type="button"
+                className="icon-btn"
+                onClick={onClearSelection}
+                aria-label="Close place preview"
+              >
+                <X size={16} />
+              </button>
             </div>
 
-            <button
-              type="button"
-              className="icon-btn"
-              onClick={onClearSelection}
-              aria-label="Close place preview"
-            >
-              <X size={16} />
-            </button>
+            <div className="place-location">
+              <MapPin size={12} />
+              <span>
+                {selectedPlace.address && !/^—/.test(selectedPlace.address)
+                  ? selectedPlace.address
+                  : selectedPlace.neighborhood}
+              </span>
+            </div>
+
+            {(selectedPlace.postedAt || selectedPlace.savedAt) && (
+              <div className="detail-dates-row">
+                {selectedPlace.postedAt && (
+                  <span className="detail-date-item">
+                    <Calendar size={10} aria-hidden="true" />
+                    <span>Posted {selectedPlace.postedAt}</span>
+                  </span>
+                )}
+                {selectedPlace.postedAt && selectedPlace.savedAt && (
+                  <span className="detail-date-sep" aria-hidden="true">
+                    ·
+                  </span>
+                )}
+                {selectedPlace.savedAt && (
+                  <span className="detail-date-item">
+                    <span>Saved {selectedPlace.savedAt}</span>
+                  </span>
+                )}
+              </div>
+            )}
           </div>
 
           {selectedPlace.note && (

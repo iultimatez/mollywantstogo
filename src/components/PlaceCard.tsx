@@ -108,15 +108,15 @@ export const PlaceCard = forwardRef<HTMLDivElement, PlaceCardProps>(
                       : ''}
                   </span>
                 </div>
-                {place.postedAt && (
+                {place.savedAt && (
                   <span
                     className="date-badge"
-                    title={`Post published: ${place.postedAt}${
-                      place.savedAt ? ` · Saved: ${place.savedAt}` : ''
+                    title={`Saved: ${place.savedAt}${
+                      place.postedAt ? ` · Post published: ${place.postedAt}` : ''
                     }`}
                   >
                     <Calendar size={10} />
-                    {formatShortDate(place.postedAt)}
+                    {formatShortDate(place.savedAt)}
                   </span>
                 )}
               </div>
