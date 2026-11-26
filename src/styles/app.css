@@ -1454,6 +1454,49 @@ a {
   flex: 1;
 }
 
+.detail-location-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  max-width: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.detail-location-link svg {
+  flex-shrink: 0;
+}
+
+.detail-location-text {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--border-dotted);
+  transition: text-decoration-color 0.2s ease;
+}
+
+.detail-location-ext {
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.detail-location-link:hover,
+.detail-location-link:focus-visible {
+  color: var(--accent);
+  outline: none;
+}
+
+.detail-location-link:hover .detail-location-text,
+.detail-location-link:focus-visible .detail-location-text {
+  text-decoration-color: var(--accent);
+}
+
+.detail-location-link:hover .detail-location-ext,
+.detail-location-link:focus-visible .detail-location-ext {
+  opacity: 1;
+}
+
 .detail-card-title {
   margin: 0;
   font-family: var(--font-display);

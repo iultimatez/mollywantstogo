@@ -107,6 +107,19 @@ export function MapView({
   const selectedPlace =
     pinnedPlaces.find((p) => p.id === selectedPlaceId) ?? null;
 
+  const selectedPlaceReels = selectedPlace
+    ? selectedPlace.reels && selectedPlace.reels.length > 0
+      ? selectedPlace.reels
+      : (selectedPlace.instagramUrls || []).map((url) => ({
+          url,
+          postedAt: undefined,
+        }))
+    : [];
+
+  const hasDetailActions = Boolean(
+    onToggleVisited || onEditPlace || selectedPlaceReels.length > 0
+  );
+
   // Initialize Leaflet map once
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
@@ -409,14 +422,30 @@ export function MapView({
               </button>
             </div>
 
-            <div className="place-location">
-              <MapPin size={12} />
-              <span>
+            <a
+              className="place-location detail-location-link"
+              href={
+                selectedPlace.googleMapsUrl ||
+                `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                  `${selectedPlace.name} ${selectedPlace.lat},${selectedPlace.lng}`
+                )}`
+              }
+              target="_blank"
+              rel="noreferrer"
+              title="Open in Google Maps"
+            >
+              <MapPin size={12} aria-hidden="true" />
+              <span className="detail-location-text">
                 {selectedPlace.address && !/^—/.test(selectedPlace.address)
                   ? selectedPlace.address
                   : selectedPlace.neighborhood}
               </span>
-            </div>
+              <ExternalLink
+                size={10}
+                className="detail-location-ext"
+                aria-hidden="true"
+              />
+            </a>
 
             {(selectedPlace.postedAt || selectedPlace.savedAt) && (
               <div className="detail-dates-row">
@@ -450,70 +479,58 @@ export function MapView({
             </div>
           )}
 
-          <div className="detail-card-actions">
-            {onToggleVisited && (
-              <button
-                type="button"
-                className="btn btn-secondary btn-sm"
-                onClick={() => onToggleVisited(selectedPlace.id)}
-              >
-                <Check size={14} />
-                {selectedPlace.visited ? 'Visited' : 'Mark visited'}
-              </button>
-            )}
+          {hasDetailActions && (
+            <div className="detail-card-actions">
+              {onToggleVisited && (
+                <button
+                  type="button"
+                  className="btn btn-secondary btn-sm"
+                  onClick={() => onToggleVisited(selectedPlace.id)}
+                >
+                  <Check size={14} />
+                  {selectedPlace.visited ? 'Visited' : 'Mark visited'}
+                </button>
+              )}
 
-            {onEditPlace && (
-              <button
-                type="button"
-                className="btn btn-ghost btn-sm"
-                onClick={() => onEditPlace(selectedPlace)}
-              >
-                <Pencil size={13} />
-                Edit
-              </button>
-            )}
+              {onEditPlace && (
+                <button
+                  type="button"
+                  className="btn btn-ghost btn-sm"
+                  onClick={() => onEditPlace(selectedPlace)}
+                >
+                  <Pencil size={13} />
+                  Edit
+                </button>
+              )}
 
-            <a
-              className="external-link"
-              href={
-                selectedPlace.googleMapsUrl ||
-                `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                  `${selectedPlace.name} ${selectedPlace.lat},${selectedPlace.lng}`
-                )}`
-              }
-              target="_blank"
-              rel="noreferrer"
-            >
-              Google Maps
-              <ExternalLink size={12} />
-            </a>
-
-            {(selectedPlace.reels && selectedPlace.reels.length > 0
-              ? selectedPlace.reels
-              : (selectedPlace.instagramUrls || []).map((url) => ({
-                  url,
-                  postedAt: undefined,
-                }))
-            ).map((reel, idx, arr) => (
-              <a
-                key={reel.url}
-                className="external-link ig-link"
-                href={reel.url}
-                target="_blank"
-                rel="noreferrer"
-                title={
-                  reel.postedAt
-                    ? `Instagram Reel posted ${reel.postedAt}`
-                    : 'Open Instagram Reel'
-                }
-              >
-                <Instagram size={12} />
-                {arr.length > 1
-                  ? `Reel ${idx + 1}${reel.postedAt ? ` · ${reel.postedAt.slice(0, 7)}` : ''}`
-                  : 'IG Reel'}
-              </a>
-            ))}
-          </div>
+              {selectedPlaceReels.map((reel, idx, arr) => (
+                <a
+                  key={reel.url}
+                  className="external-link ig-link"
+                  href={reel.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  title={
+                    reel.postedAt
+                      ? `Instagram Reel posted ${reel.postedAt}`
+                      : 'Open Instagram Reel'
+                  }
+                  aria-label={
+                    arr.length > 1
+                      ? `Instagram Reel ${idx + 1}${reel.postedAt ? ` (${reel.postedAt})` : ''}`
+                      : 'Open Instagram Reel'
+                  }
+                >
+                  <Instagram size={12} aria-hidden="true" />
+                  {arr.length > 1
+                    ? reel.postedAt
+                      ? reel.postedAt.slice(0, 7)
+                      : `${idx + 1}`
+                    : 'IG Reel'}
+                </a>
+              ))}
+            </div>
+          )}
         </aside>
       )}
     </div>
