@@ -421,6 +421,7 @@ export function App() {
 
   return (
     <div className="app-shell">
+      <div className="standalone-top-bar" aria-hidden="true" />
       <Header
         mode={mode}
         onModeChange={(nextMode) => navigateToMode(nextMode)}
