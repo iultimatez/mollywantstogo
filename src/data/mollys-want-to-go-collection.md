@@ -19,41 +19,41 @@
 | 3 | 鮨荻 sushi ogi | 餐廳 — 無菜單料理 | 台北市中山區天津街21號；介於台北車站與善導寺捷運站之間 | 2026-11-23 00:03 | 2026-07-11 | [開啟](https://www.google.com/maps/search/?api=1&query=%E9%AE%A8%E8%8D%BB+sushi+ogi%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E5%A4%A9%E6%B4%A5%E8%A1%9721%E8%99%9F) |
 | 4 | 一味醬蟹 / 일미간장게장 | 餐廳 — 醬油醃蟹 | 서울특별시 동대문구 장안동 367-3, 韓國 | 2026-11-23 00:03 | 2026-04-17 | [開啟](https://www.google.com/maps/search/?api=1&query=%E4%B8%80%E5%91%B3%E9%86%AC%E8%9F%B9%2C+%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC+%EC%9E%A5%EC%95%88%EB%8F%99+367-3%2C+South+Korea) |
 | 5 | 春間艸艸 — 無菜單和牛海鮮燒肉專門 | 餐廳 — 無菜單式和牛燒肉 | 臺中市西區公益路250號1樓 | 2026-11-23 00:03 | 2026-04-10 | [開啟](https://www.google.com/maps/search/?api=1&query=%E6%98%A5%E9%96%93%E8%89%B8%E8%89%B8%2C+%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%8D%80%E5%85%AC%E7%9B%8A%E8%B7%AF250%E8%99%9F1%E6%A8%93) |
-| 6 | Montenegro (inferred title) | 旅遊景點 — 國家旅遊指南 | 蒙特內哥羅，歐洲（未提供具體地址／地區） | 2026-11-23 00:03 | 2026-02-07 | — |
+| 6 | 蒙特內哥羅（推測標題） | 旅遊景點 — 國家旅遊指南 | 蒙特內哥羅，歐洲（未提供具體地址／地區） | 2026-11-23 00:03 | 2026-02-07 | — |
 | 7 | 忻鮨壽司 | 餐廳 — 無菜單料理 | 臺北市萬華區桂林路109號；龍山寺附近 | 2026-11-23 00:03 | 2026-01-19 | [開啟](https://www.google.com/maps/search/?api=1&query=%E5%BF%BB%E9%AE%A8%E5%A3%BD%E5%8F%B8%2C+%E8%87%BA%E5%8C%97%E5%B8%82%E8%90%AC%E8%8F%AF%E5%8D%80%E6%A1%82%E6%9E%97%E8%B7%AF109%E8%99%9F) |
 | 8 | MUJI Glassblowing — MUJI Miramar Flagship Store | 商店／體驗活動 — 玻璃吹製體驗 | 10491, Taiwan, Taipei City, Zhongshan District, Jingye 3rd Rd, 20號2樓 | 2026-11-23 00:03 | 2026-01-09 | [開啟](https://www.google.com/maps/search/?api=1&query=MUJI+Miramar+Flagship+Store%2C+Jingye+3rd+Rd%2C+20%E8%99%9F2%E6%A8%93%2C+Taipei+City) |
 | 9 | 晶華軒 | 餐廳 — 粵菜、螃蟹宴 | 台北市中山區中山北路二段39巷3號3樓；捷運中山站 3 號出口 | 2026-11-23 00:03 | 2025-11-17 | [開啟](https://www.google.com/maps/search/?api=1&query=%E6%99%B6%E8%8F%AF%E8%BB%92%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E4%B8%AD%E5%B1%B1%E5%8C%97%E8%B7%AF%E4%BA%8C%E6%AE%B539%E5%B7%B73%E8%99%9F3%E6%A8%93) |
 | 10 | 米嵐義式餐廳 (Milan Italian Bento) | 餐廳 — 義式料理 | 信義區，台北（僅提及行政區；貼文中未提供街道地址） | 2026-11-23 00:03 | 2026-03-14 | [開啟](https://www.google.com/maps/search/?api=1&query=%E7%B1%B3%E5%B5%90%E7%BE%A9%E5%BC%8F%E9%A4%90%E5%BB%B3+%28Milan+Italian+Bento%29%2C+%E4%BF%A1%E7%BE%A9%E5%8D%80%2C+Taipei) |
 | 11 | 一氣水產 / 浜燒居酒屋 / IKKI Hamayaki | 餐廳 — 居酒屋／海鮮 | 台北市松山區市民大道四段91號；捷運忠孝復興站 | 2026-11-23 00:03 | 2024-11-05 | [開啟](https://www.google.com/maps/search/?api=1&query=%E4%B8%80%E6%B0%A3%E6%B0%B4%E7%94%A2%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E6%9D%BE%E5%B1%B1%E5%8D%80%E5%B8%82%E6%B0%91%E5%A4%A7%E9%81%93%E5%9B%9B%E6%AE%B591%E8%99%9F) |
 | 12 | 燒鳩 刺身‧串燒‧雞白湯關東煮 | 餐廳 — 居酒屋 | 臺北市萬華區成都路92號；捷運西門站步行 5 分鐘，西門商圈 | 2026-11-23 00:03 | 2026-06-04 | [開啟](https://www.google.com/maps/search/?api=1&query=%E7%87%92%E9%B3%A9%2C+%E8%87%BA%E5%8C%97%E5%B8%82%E8%90%AC%E8%8F%AF%E5%8D%80%E6%88%90%E9%83%BD%E8%B7%AF92%E8%99%9F) |
-| 13 | Malaysia street stall — RM188 bowl of white rice (inferred title) | 餐廳／街頭小吃 — 病毒式短片 | 馬來西亞（僅提及國家，依據標籤；貼文中未提供具體地點） | 2026-11-23 00:03 | 2026-01-01 | — |
+| 13 | 馬來西亞街頭小吃 — 一碗白飯 RM188（推測標題） | 餐廳／街頭小吃 — 病毒式短片 | 馬來西亞（僅提及國家，依據標籤；貼文中未提供具體地點） | 2026-11-23 00:03 | 2026-01-01 | — |
 | 14 | 蠻秋咖啡 / Manchill Roasteria | 咖啡廳 — 咖啡與可頌 | 臺中市西區精誠十五街8號 | 2026-11-23 00:03 | 2026-03-29 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%A0%BB%E7%A7%8B%E5%92%96%E5%95%A1%2C+%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%8D%80%E7%B2%BE%E8%AA%A0%E5%8D%81%E4%BA%94%E8%A1%978%E8%99%9F) |
 | 15 | Miko Sushi Ginza | 餐廳 — 壽司、海膽吃到飽 | 銀座，東京（僅提及地區；貼文中未提供街道地址） | 2026-11-23 00:03 | 2026-06-11 | [開啟](https://www.google.com/maps/search/?api=1&query=Miko+Sushi+Ginza%2C+Ginza%2C+Tokyo) |
 | 16 | 祇園.禪院壽喜燒專門店 | 餐廳 — 壽喜燒 | 臺北市大安區樂利路11巷22號；捷運信義安和站／六張犁站 | 2026-11-23 00:03 | 2026-04-09 | [開啟](https://www.google.com/maps/search/?api=1&query=%E7%A5%87%E5%9C%92%E7%A6%AA%E9%99%A2%E5%A3%BD%E5%96%9C%E7%87%92%E5%B0%88%E9%96%80%E5%BA%97%2C+%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E6%A8%82%E5%88%A9%E8%B7%AF11%E5%B7%B722%E8%99%9F) |
 | 17 | Yoshikawa Seafood Don | 餐廳 — 海鮮丼 | 台北，台灣（僅提及城市；貼文中未提供街道地址） | 2026-11-23 00:03 | 2026-04-17 | [開啟](https://www.google.com/maps/search/?api=1&query=Yoshikawa+Seafood+Don%2C+Taipei%2C+Taiwan) |
 | 18 | 二本松涮涮屋 | 餐廳 — 火鍋／涮涮鍋 | 臺北市大安區瑞安街118號 | 2026-11-23 00:03 | 2026-06-02 | [開啟](https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E6%9C%AC%E6%9D%BE%E6%B6%AE%E6%B6%AE%E5%B1%8B%2C+%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E7%91%9E%E5%AE%89%E8%A1%97118%E8%99%9F) |
-| 19 | Cloud over a hillside (inferred title) | 旅遊／自然 — 風景短片 | —（非地點） | 2026-11-23 00:03 | 2023-07-02 | — |
+| 19 | 山丘上的雲（推測標題） | 旅遊／自然 — 風景短片 | —（非地點） | 2026-11-23 00:03 | 2023-07-02 | — |
 | 20 | 鮨一 Ichi Sushi | 餐廳 — 無菜單料理 | 臺北市中山區民權東路三段60巷4號 | 2026-11-23 00:03 | 2026-08-06 | [開啟](https://www.google.com/maps/search/?api=1&query=%E9%AE%A8%E4%B8%80+Ichi+Sushi%2C+%E8%87%BA%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E6%B0%91%E6%AC%8A%E6%9D%B1%E8%B7%AF%E4%B8%89%E6%AE%B560%E5%B7%B74%E8%99%9F) |
 | 21 | Office Space (1999) | 娛樂 — 電影評論 | —（非地點） | 2026-11-23 00:03 | 2025-09-29 | — |
 | 22 | Nemotora, Ningyocho (inferred from @nemotora_ningyocho) | 餐廳 — 牛丼 | 人形町（Ningyocho），東京（僅提及地區；貼文中未提供街道地址） | 2026-11-23 00:03 | 2023-03-18 | [開啟](https://www.google.com/maps/search/?api=1&query=Nemotora%2C+%E4%BA%BA%E5%BD%A2%E7%94%BA%2C+Tokyo) |
 | 23 | 醬蟹教父 / Crabfather | 餐廳 — 醬油醃蟹 | 臺中市南屯區大墩路717-5號 | 2026-11-23 00:03 | 2026-10-15 | [開啟](https://www.google.com/maps/search/?api=1&query=%E9%86%AC%E8%9F%B9%E6%95%99%E7%88%B6%2C+%E8%87%BA%E4%B8%AD%E5%B8%82%E5%8D%97%E5%B1%AF%E5%8D%80%E5%A4%A7%E5%A2%A9%E8%B7%AF717-5%E8%99%9F) |
 | 24 | 究極燒肉 | 餐廳 — 深夜炭火燒肉／小盤料理 | 台北市中山區雙城街28巷2號；捷運中山國小站步行 7 分鐘 | 2026-11-23 00:03 | 2026-10-17 | [開啟](https://www.google.com/maps/search/?api=1&query=%E7%A9%B6%E6%A5%B5%E7%87%92%E8%82%89%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E9%9B%99%E5%9F%8E%E8%A1%9728%E5%B7%B72%E8%99%9F) |
-| 25 | Hard-to-book Taipei restaurant (inferred title; name not stated) | 餐廳 — 預告／迷因 | 貼文中未提及 | 2026-11-23 00:03 | 2026-04-05 | — |
+| 25 | 難訂位的台北餐廳（推測標題；未提及店名） | 餐廳 — 預告／迷因 | 貼文中未提及 | 2026-11-23 00:03 | 2026-04-05 | — |
 | 26 | 二本松涮涮屋 — 海膽7吃盛宴 | 餐廳 — 火鍋、海膽盛宴 | 台北市大安區瑞安街118號；捷運大安站 4 號出口，步行約 6 分鐘 | 2026-11-23 00:03 | 2026-10-01 | [開啟](https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E6%9C%AC%E6%9D%BE%E6%B6%AE%E6%B6%AE%E5%B1%8B%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E7%91%9E%E5%AE%89%E8%A1%97118%E8%99%9F) |
 | 27 | 魚春 UOHARU | 餐廳 — 無菜單料理／壽司吧 | 11041臺北市信義區吳興街8巷3號1樓；捷運台北 101 站 2 號出口，步行 5 分鐘 | 2026-11-23 00:03 | 2026-06-08 | [開啟](https://www.google.com/maps/search/?api=1&query=%E9%AD%9A%E6%98%A5+UOHARU%2C+%E8%87%BA%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E5%90%B3%E8%88%88%E8%A1%978%E5%B7%B73%E8%99%9F1%E6%A8%93) |
-| 28 | Zakynthos, Greece — transport and costs follow-up (inferred title) | 旅遊景點 — 希臘旅遊指南 | 札金索斯，希臘（僅提及島嶼；未提供具體地址） | 2026-11-23 00:03 | 2026-07-06 | — |
+| 28 | 希臘札金索斯 — 交通與費用後續（推測標題） | 旅遊景點 — 希臘旅遊指南 | 札金索斯，希臘（僅提及島嶼；未提供具體地址） | 2026-11-23 00:03 | 2026-07-06 | — |
 | 29 | 毓鐵板燒 | 餐廳 — 鐵板燒 | 臺北市萬華區昆明街232號；台北車站附近 | 2026-11-23 00:03 | 2025-11-26 | [開啟](https://www.google.com/maps/search/?api=1&query=%E6%AF%93%E9%90%B5%E6%9D%BF%E7%87%92%2C+%E8%87%BA%E5%8C%97%E5%B8%82%E8%90%AC%E8%8F%AF%E5%8D%80%E6%98%86%E6%98%8E%E8%A1%97232%E8%99%9F) |
 | 30 | 極鶴和牛鍋物旗艦店 | 餐廳 — 火鍋吃到飽 | 台北大安區仁愛路四段91巷5號；捷運忠孝敦化站，步行 8 分鐘 | 2026-11-23 00:03 | 2026-05-07 | [開啟](https://www.google.com/maps/search/?api=1&query=%E6%A5%B5%E9%B6%B4%E5%92%8C%E7%89%9B%E9%8D%8B%E7%89%A9%E6%97%97%E8%89%A6%E5%BA%97%2C+%E5%8F%B0%E5%8C%97%E5%A4%A7%E5%AE%89%E5%8D%80%E4%BB%81%E6%84%9B%E8%B7%AF%E5%9B%9B%E6%AE%B591%E5%B7%B75%E8%99%9F) |
 | 31 | Yakiniku Inoue Ginza | 餐廳 — 和牛丼飯 | 1 Chome-6-6 Ginza, Chuo City, Tokyo 104-0061, Japan；銀座一丁目站 6 號出口步行 1 分鐘 | 2026-11-23 00:03 | 2024-07-27 | [開啟](https://www.google.com/maps/search/?api=1&query=Yakiniku+Inoue+Ginza%2C+1+Chome-6-6+Ginza%2C+Chuo+City%2C+Tokyo+104-0061%2C+Japan) |
 | 32 | Kanimatsuri Crab Restaurant / 築地かに祭り | 餐廳 — 螃蟹吃到飽 | 〒104-0045 東京都中央区築地4丁目8−12, Tokyo | 2026-11-23 00:03 | 2026-03-01 | [開啟](https://www.google.com/maps/search/?api=1&query=%E7%AF%89%E5%9C%B0%E3%81%8B%E3%81%AB%E7%A5%AD%E3%82%8A%2C+%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA%E7%AF%89%E5%9C%B04%E4%B8%81%E7%9B%AE8-12%2C+Tokyo) |
-| 33 | Egypt itinerary / route guide (inferred title) | 旅遊 — 行程資訊 | 埃及（僅提及國家；未提供具體地點／地址） | 2026-11-23 00:03 | 2025-10-31 | — |
+| 33 | 埃及行程／路線指南（推測標題） | 旅遊 — 行程資訊 | 埃及（僅提及國家；未提供具體地點／地址） | 2026-11-23 00:03 | 2025-10-31 | — |
 | 34 | 皇城司 The SPY Bar & Bistro | 餐廳／酒吧 — 餐酒館 | 台北市中山區新生北路二段75號1樓；行天宮附近 | 2026-11-23 00:03 | 2026-06-27 | [開啟](https://www.google.com/maps/search/?api=1&query=%E7%9A%87%E5%9F%8E%E5%8F%B8+The+SPY+Bar+%26+Bistro%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E6%96%B0%E7%94%9F%E5%8C%97%E8%B7%AF%E4%BA%8C%E6%AE%B575%E8%99%9F1%E6%A8%93) |
-| 35 | 台南大天后宮 — Qixi / Yuelao guide (inferred from hashtags) | 旅遊景點 — 廟宇／節慶指南 | 台南，台灣（僅提及城市，依據標籤；貼文中未提供街道地址） | 2026-11-23 00:03 | 2025-08-21 | [開啟](https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E5%8D%97%E5%A4%A7%E5%A4%A9%E5%90%8E%E5%AE%AE%2C+Tainan%2C+Taiwan) |
-| 36 | First-time overseas travel recommendations (inferred title) | 旅遊 — 目的地推薦 | 貼文中未提及（提及的國家：泰國、韓國、日本、塞爾維亞等；未提供具體地點） | 2026-11-23 00:03 | 2024-11-08 | — |
-| 37 | China travel clip (inferred title) | 旅遊 — 風景短片 | 中國（僅提及國家，依據標籤；未提供具體地點） | 2026-11-23 00:03 | 2023-08-04 | — |
+| 35 | 台南大天后宮 — 七夕／月老指南（由主題標籤推測） | 旅遊景點 — 廟宇／節慶指南 | 台南，台灣（僅提及城市，依據標籤；貼文中未提供街道地址） | 2026-11-23 00:03 | 2025-08-21 | [開啟](https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E5%8D%97%E5%A4%A7%E5%A4%A9%E5%90%8E%E5%AE%AE%2C+Tainan%2C+Taiwan) |
+| 36 | 首次出國旅遊推薦（推測標題） | 旅遊 — 目的地推薦 | 貼文中未提及（提及的國家：泰國、韓國、日本、塞爾維亞等；未提供具體地點） | 2026-11-23 00:03 | 2024-11-08 | — |
+| 37 | 中國旅遊短片（推測標題） | 旅遊 — 風景短片 | 中國（僅提及國家，依據標籤；未提供具體地點） | 2026-11-23 00:03 | 2023-08-04 | — |
 | 38 | 山田の鰻 / Yamada no Unagi | 餐廳 — 拉麵（鰻魚餐廳內的拉麵） | 飯田橋站（飯田橋車站一帶），東京（僅提及地區；貼文中未提供街道地址） | 2026-11-23 00:03 | 2023-03-21 | [開啟](https://www.google.com/maps/search/?api=1&query=%E5%B1%B1%E7%94%B0%E3%81%AE%E9%B0%BB%2C+Iidabashi%2C+Tokyo) |
 | 39 | 千壽 / Senju Taipei | 餐廳 — 無菜單料理 | 臺北市大安區忠孝東路四段216巷27弄17號；東區，入口不易尋找 | 2026-11-23 00:03 | 2026-10-15 | [開啟](https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E5%A3%BD%2C+%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BF%A0%E5%AD%9D%E6%9D%B1%E8%B7%AF%E5%9B%9B%E6%AE%B5216%E5%B7%B727%E5%BC%8417%E8%99%9F) |
-| 40 | Satisfying acrylic painting (inferred title) | 娛樂／藝術 — 療癒繪畫短片 | —（非地點） | 2026-11-23 00:03 | 2023-03-19 | — |
+| 40 | 療癒壓克力繪畫（推測標題） | 娛樂／藝術 — 療癒繪畫短片 | —（非地點） | 2026-11-23 00:03 | 2023-03-19 | — |
 | 41 | 忻鮨壽司 | 餐廳 — 無菜單料理 | 台北市萬華區桂林路109號；龍山寺捷運站步行 7 分鐘 | 2026-11-23 00:03 | 2026-06-01 | [開啟](https://www.google.com/maps/search/?api=1&query=%E5%BF%BB%E9%AE%A8%E5%A3%BD%E5%8F%B8%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E8%90%AC%E8%8F%AF%E5%8D%80%E6%A1%82%E6%9E%97%E8%B7%AF109%E8%99%9F) |
 | 42 | 鮨一壽司 | 餐廳 — 無菜單料理 | 臺北市中山區民權東路三段60巷4號；行天宮附近 | 2026-11-23 00:03 | 2026-07-31 | [開啟](https://www.google.com/maps/search/?api=1&query=%E9%AE%A8%E4%B8%80%E5%A3%BD%E5%8F%B8%2C+%E8%87%BA%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E6%B0%91%E6%AC%8A%E6%9D%B1%E8%B7%AF%E4%B8%89%E6%AE%B560%E5%B7%B74%E8%99%9F) |
 | 43 | 軒 のき NOKI | 餐廳 — 關西風壽喜燒 | 桃園市龜山區文化二路32-18號2樓；捷運長庚紀念醫院站步行 10 分鐘（林口一帶） | 2026-11-23 00:03 | 2026-01-06 | [開啟](https://www.google.com/maps/search/?api=1&query=%E8%BB%92+%E3%81%AE%E3%81%8D+NOKI%2C+%E6%A1%83%E5%9C%92%E5%B8%82%E9%BE%9C%E5%B1%B1%E5%8D%80%E6%96%87%E5%8C%96%E4%BA%8C%E8%B7%AF32-18%E8%99%9F2%E6%A8%93) |
@@ -96,7 +96,7 @@
 | 80 | Doze Gi 杜菇餐酒館 | 餐廳／酒吧 — 餐酒館 | 新北市永和區仁愛路213號 | 2026-11-23 00:03 | 2026-11-03 | [開啟](https://www.google.com/maps/search/?api=1&query=Doze+Gi+%E6%9D%9C%E8%8F%87%E9%A4%90%E9%85%92%E9%A4%A8%2C+%E6%96%B0%E5%8C%97%E5%B8%82%E6%B0%B8%E5%92%8C%E5%8D%80%E4%BB%81%E6%84%9B%E8%B7%AF213%E8%99%9F) |
 | 81 | 忻鮨壽司 | 餐廳 — 無菜單料理 | 台北市萬華區桂林路109號 | 2026-11-23 00:03 | 2026-07-06 | [開啟](https://www.google.com/maps/search/?api=1&query=%E5%BF%BB%E9%AE%A8%E5%A3%BD%E5%8F%B8%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E8%90%AC%E8%8F%AF%E5%8D%80%E6%A1%82%E6%9E%97%E8%B7%AF109%E8%99%9F) |
 | 82 | 龍割烹 Ryu Kappou | 餐廳 — 割烹／無菜單料理 | 台北市大安區大安路二段68號 | 2026-11-23 00:03 | 2026-10-19 | [開啟](https://www.google.com/maps/search/?api=1&query=%E9%BE%8D%E5%89%B2%E7%83%B9+Ryu+Kappou%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%A4%A7%E5%AE%89%E8%B7%AF%E4%BA%8C%E6%AE%B568%E8%99%9F) |
-| 83 | Giant crab and roast suckling pig in Malaysia — inferred title; no restaurant name stated in post | 餐廳 — 海鮮（推測） | 馬來西亞（僅提及國家；貼文未提供城市、地址或餐廳名稱） | 2026-11-23 00:03 | 2026-06-25 | — |
+| 83 | 馬來西亞巨蟹與烤乳豬（推測標題；貼文未提及餐廳名稱） | 餐廳 — 海鮮（推測） | 馬來西亞（僅提及國家；貼文未提供城市、地址或餐廳名稱） | 2026-11-23 00:03 | 2026-06-25 | — |
 | 84 | 橋山.鵲邸壽喜燒 (Tainan) and 橋山.壽喜燒 すき焼き專門店 はしやま (Taipei) — two branches in one post | 餐廳 — 壽喜燒 | 台南：台南市南區體育路9號；台北：106臺北市大安區龍圖里瑞安街120巷3弄1號 | 2026-11-23 00:03 | 2026-10-03 | [台南](https://www.google.com/maps/search/?api=1&query=%E6%A9%8B%E5%B1%B1.%E9%B5%B2%E9%82%B8%E5%A3%BD%E5%96%9C%E7%87%92%2C%20%E5%8F%B0%E5%8D%97%E5%B8%82%E5%8D%97%E5%8D%80%E9%AB%94%E8%82%B2%E8%B7%AF9%E8%99%9F)／[台北](https://www.google.com/maps/search/?api=1&query=%E6%A9%8B%E5%B1%B1.%E5%A3%BD%E5%96%9C%E7%87%92%20%E3%81%99%E3%81%8D%E7%84%BC%E3%81%8D%E5%B0%88%E9%96%80%E5%BA%97%20%E3%81%AF%E3%81%97%E3%82%84%E3%81%BE%2C%20106%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E9%BE%8D%E5%9C%96%E9%87%8C%E7%91%9E%E5%AE%89%E8%A1%97120%E5%B7%B73%E5%BC%841%E8%99%9F) |
 | 85 | 正谷家-韓式火鍋.一隻雞.料理 (Korean soy-marinated crab/shrimp, hot pot, one-chicken) | 餐廳 — 韓式料理 | 330桃園市桃園區文中東路79號 | 2026-11-23 00:03 | 2026-06-02 | [開啟](https://www.google.com/maps/search/?api=1&query=%E6%AD%A3%E8%B0%B7%E5%AE%B6-%E9%9F%93%E5%BC%8F%E7%81%AB%E9%8D%8B.%E4%B8%80%E9%9A%BB%E9%9B%9E.%E6%96%99%E7%90%86%2C+330%E6%A1%83%E5%9C%92%E5%B8%82%E6%A1%83%E5%9C%92%E5%8D%80%E6%96%87%E4%B8%AD%E6%9D%B1%E8%B7%AF79%E8%99%9F) |
 | 86 | 祇園.禪院壽喜燒專門店 | 餐廳 — 壽喜燒（關西風） | 台北市大安區樂利路11巷22號 | 2026-11-23 00:03 | 2026-03-30 | [開啟](https://www.google.com/maps/search/?api=1&query=%E7%A5%87%E5%9C%92.%E7%A6%AA%E9%99%A2%E5%A3%BD%E5%96%9C%E7%87%92%E5%B0%88%E9%96%80%E5%BA%97%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E6%A8%82%E5%88%A9%E8%B7%AF11%E5%B7%B722%E8%99%9F) |
@@ -334,7 +334,7 @@
 - Instagram：[https://www.instagram.com/reel/DW-snPnD208/](https://www.instagram.com/reel/DW-snPnD208/)
 - Google Maps：[在 Google Maps 開啟](https://www.google.com/maps/search/?api=1&query=%E6%98%A5%E9%96%93%E8%89%B8%E8%89%B8%2C+%E8%87%BA%E4%B8%AD%E5%B8%82%E8%A5%BF%E5%8D%80%E5%85%AC%E7%9B%8A%E8%B7%AF250%E8%99%9F1%E6%A8%93)
 
-### 6. Montenegro (inferred title)
+### 6. 蒙特內哥羅（推測標題）
 
 - 類別：旅遊景點 — 國家旅遊指南
 - 地點：蒙特內哥羅，歐洲（未提供具體地址／地區）
@@ -404,7 +404,7 @@
 - Instagram：[https://www.instagram.com/reel/DZKjYqHKXBN/](https://www.instagram.com/reel/DZKjYqHKXBN/)
 - Google Maps：[在 Google Maps 開啟](https://www.google.com/maps/search/?api=1&query=%E7%87%92%E9%B3%A9%2C+%E8%87%BA%E5%8C%97%E5%B8%82%E8%90%AC%E8%8F%AF%E5%8D%80%E6%88%90%E9%83%BD%E8%B7%AF92%E8%99%9F)
 
-### 13. Malaysia street stall — RM188 bowl of white rice (inferred title)
+### 13. 馬來西亞街頭小吃 — 一碗白飯 RM188（推測標題）
 
 - 類別：餐廳／街頭小吃 — 病毒式短片
 - 地點：馬來西亞（僅提及國家，依據標籤；貼文中未提供具體地點）
@@ -464,7 +464,7 @@
 - Instagram：[https://www.instagram.com/reel/DZFFEL2prvL/](https://www.instagram.com/reel/DZFFEL2prvL/)
 - Google Maps：[在 Google Maps 開啟](https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E6%9C%AC%E6%9D%BE%E6%B6%AE%E6%B6%AE%E5%B1%8B%2C+%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E7%91%9E%E5%AE%89%E8%A1%97118%E8%99%9F)
 
-### 19. Cloud over a hillside (inferred title)
+### 19. 山丘上的雲（推測標題）
 
 - 類別：旅遊／自然 — 風景短片
 - 地點：—（非地點）
@@ -524,7 +524,7 @@
 - Instagram：[https://www.instagram.com/reel/DelrBpJAsfh/](https://www.instagram.com/reel/DelrBpJAsfh/)
 - Google Maps：[在 Google Maps 開啟](https://www.google.com/maps/search/?api=1&query=%E7%A9%B6%E6%A5%B5%E7%87%92%E8%82%89%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E9%9B%99%E5%9F%8E%E8%A1%9728%E5%B7%B72%E8%99%9F)
 
-### 25. Hard-to-book Taipei restaurant (inferred title; name not stated)
+### 25. 難訂位的台北餐廳（推測標題；未提及店名）
 
 - 類別：餐廳 — 預告／迷因
 - 地點：貼文中未提及
@@ -554,7 +554,7 @@
 - Instagram：[https://www.instagram.com/reel/DZUh8IVxp7N/](https://www.instagram.com/reel/DZUh8IVxp7N/)
 - Google Maps：[在 Google Maps 開啟](https://www.google.com/maps/search/?api=1&query=%E9%AD%9A%E6%98%A5+UOHARU%2C+%E8%87%BA%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E5%90%B3%E8%88%88%E8%A1%978%E5%B7%B73%E8%99%9F1%E6%A8%93)
 
-### 28. Zakynthos, Greece — transport and costs follow-up (inferred title)
+### 28. 希臘札金索斯 — 交通與費用後續（推測標題）
 
 - 類別：旅遊景點 — 希臘旅遊指南
 - 地點：札金索斯，希臘（僅提及島嶼；未提供具體地址）
@@ -604,7 +604,7 @@
 - Instagram：[https://www.instagram.com/reel/DVV-agMklbE/](https://www.instagram.com/reel/DVV-agMklbE/)
 - Google Maps：[在 Google Maps 開啟](https://www.google.com/maps/search/?api=1&query=%E7%AF%89%E5%9C%B0%E3%81%8B%E3%81%AB%E7%A5%AD%E3%82%8A%2C+%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA%E7%AF%89%E5%9C%B04%E4%B8%81%E7%9B%AE8-12%2C+Tokyo)
 
-### 33. Egypt itinerary / route guide (inferred title)
+### 33. 埃及行程／路線指南（推測標題）
 
 - 類別：旅遊 — 行程資訊
 - 地點：埃及（僅提及國家；未提供具體地點／地址）
@@ -624,7 +624,7 @@
 - Instagram：[https://www.instagram.com/reel/DaFZn7CzXWd/](https://www.instagram.com/reel/DaFZn7CzXWd/)
 - Google Maps：[在 Google Maps 開啟](https://www.google.com/maps/search/?api=1&query=%E7%9A%87%E5%9F%8E%E5%8F%B8+The+SPY+Bar+%26+Bistro%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E6%96%B0%E7%94%9F%E5%8C%97%E8%B7%AF%E4%BA%8C%E6%AE%B575%E8%99%9F1%E6%A8%93)
 
-### 35. 台南大天后宮 — Qixi / Yuelao guide (inferred from hashtags)
+### 35. 台南大天后宮 — 七夕／月老指南（由主題標籤推測）
 
 - 類別：旅遊景點 — 廟宇／節慶指南
 - 地點：台南，台灣（僅提及城市，依據標籤；貼文中未提供街道地址）
@@ -634,7 +634,7 @@
 - Instagram：[https://www.instagram.com/reel/DNn0_MSS-iT/](https://www.instagram.com/reel/DNn0_MSS-iT/)
 - Google Maps：[在 Google Maps 開啟](https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E5%8D%97%E5%A4%A7%E5%A4%A9%E5%90%8E%E5%AE%AE%2C+Tainan%2C+Taiwan)
 
-### 36. First-time overseas travel recommendations (inferred title)
+### 36. 首次出國旅遊推薦（推測標題）
 
 - 類別：旅遊 — 目的地推薦
 - 地點：貼文中未提及（提及的國家：泰國、韓國、日本、塞爾維亞等；未提供具體地點）
@@ -644,7 +644,7 @@
 - Instagram：[https://www.instagram.com/reel/DCHcz-mBFax/](https://www.instagram.com/reel/DCHcz-mBFax/)
 - Google Maps：—
 
-### 37. China travel clip (inferred title)
+### 37. 中國旅遊短片（推測標題）
 
 - 類別：旅遊 — 風景短片
 - 地點：中國（僅提及國家，依據標籤；未提供具體地點）
@@ -674,7 +674,7 @@
 - Instagram：[https://www.instagram.com/reel/DehCA1fuIiI/](https://www.instagram.com/reel/DehCA1fuIiI/)
 - Google Maps：[在 Google Maps 開啟](https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E5%A3%BD%2C+%E8%87%BA%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BF%A0%E5%AD%9D%E6%9D%B1%E8%B7%AF%E5%9B%9B%E6%AE%B5216%E5%B7%B727%E5%BC%8417%E8%99%9F)
 
-### 40. Satisfying acrylic painting (inferred title)
+### 40. 療癒壓克力繪畫（推測標題）
 
 - 類別：娛樂／藝術 — 療癒繪畫短片
 - 地點：—（非地點）
@@ -1104,7 +1104,7 @@
 - Instagram：[https://www.instagram.com/reel/DerUK-xikF_/](https://www.instagram.com/reel/DerUK-xikF_/)
 - Google Maps：[在 Google Maps 開啟](https://www.google.com/maps/search/?api=1&query=%E9%BE%8D%E5%89%B2%E7%83%B9+Ryu+Kappou%2C+%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%A4%A7%E5%AE%89%E8%B7%AF%E4%BA%8C%E6%AE%B568%E8%99%9F)
 
-### 83. Giant crab and roast suckling pig in Malaysia — inferred title; no restaurant name stated in post
+### 83. 馬來西亞巨蟹與烤乳豬（推測標題；貼文未提及餐廳名稱）
 
 - 類別：餐廳 — 海鮮（推測）
 - 地點：馬來西亞（僅提及國家；貼文未提供城市、地址或餐廳名稱）
