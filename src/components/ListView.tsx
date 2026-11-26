@@ -126,7 +126,6 @@ export function ListView({
                     ? onOpenOnMap
                     : onEdit
                 }
-                onViewOnMap={onOpenOnMap}
                 onToggleVisited={onToggleVisited}
                 onEdit={onEdit}
                 onCategoryClick={onCategoryChange}

@@ -1,5 +1,13 @@
 import { forwardRef } from 'react';
-import { Calendar, Check, Flame, Instagram, MapPin, Pencil } from 'lucide-react';
+import {
+  Calendar,
+  Check,
+  ExternalLink,
+  Flame,
+  Instagram,
+  MapPin,
+  Pencil,
+} from 'lucide-react';
 import { CATEGORIES, Place, PlaceCategory } from '../types';
 
 function formatShortDate(isoDate?: string): string {
@@ -34,7 +42,6 @@ interface PlaceCardProps {
   onHover?: (id: string | null) => void;
   onToggleVisited?: (id: string) => void;
   onEdit?: (place: Place) => void;
-  onViewOnMap?: (place: Place) => void;
   onCategoryClick?: (category: PlaceCategory) => void;
 }
 
@@ -50,7 +57,6 @@ export const PlaceCard = forwardRef<HTMLDivElement, PlaceCardProps>(
       onHover,
       onToggleVisited,
       onEdit,
-      onViewOnMap,
       onCategoryClick,
     },
     ref
@@ -60,6 +66,19 @@ export const PlaceCard = forwardRef<HTMLDivElement, PlaceCardProps>(
     const primaryIg = place.instagramUrls?.[0];
     const hasActions = Boolean(primaryIg || onToggleVisited || onEdit);
     const isInteractive = Boolean(onSelect);
+    const locationLabel = `${place.neighborhood}${
+      place.regionLabel &&
+      !place.neighborhood.includes(place.regionLabel.split(' ')[0])
+        ? ` · ${place.regionLabel}`
+        : ''
+    }`;
+    const googleMapsHref =
+      place.googleMapsUrl ||
+      (hasPin
+        ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+            `${place.name} ${place.lat},${place.lng}`
+          )}`
+        : null);
 
     return (
       <div
@@ -98,16 +117,30 @@ export const PlaceCard = forwardRef<HTMLDivElement, PlaceCardProps>(
                 <h3 className="place-name">{place.name}</h3>
               </div>
               <div className="place-header-meta">
-                <div className="place-location">
-                  <MapPin size={12} aria-hidden="true" />
-                  <span>
-                    {place.neighborhood}
-                    {place.regionLabel &&
-                    !place.neighborhood.includes(place.regionLabel.split(' ')[0])
-                      ? ` · ${place.regionLabel}`
-                      : ''}
-                  </span>
-                </div>
+                {googleMapsHref ? (
+                  <a
+                    className="place-location detail-location-link"
+                    href={googleMapsHref}
+                    target="_blank"
+                    rel="noreferrer"
+                    title="Open in Google Maps"
+                    onClick={(e) => e.stopPropagation()}
+                    onKeyDown={(e) => e.stopPropagation()}
+                  >
+                    <MapPin size={12} aria-hidden="true" />
+                    <span className="detail-location-text">{locationLabel}</span>
+                    <ExternalLink
+                      size={10}
+                      className="detail-location-ext"
+                      aria-hidden="true"
+                    />
+                  </a>
+                ) : (
+                  <div className="place-location">
+                    <MapPin size={12} aria-hidden="true" />
+                    <span>{locationLabel}</span>
+                  </div>
+                )}
                 {place.savedAt && (
                   <span
                     className="date-badge"
@@ -239,20 +272,6 @@ export const PlaceCard = forwardRef<HTMLDivElement, PlaceCardProps>(
               <span className="unpinned-badge">No map pin</span>
             )}
           </div>
-
-          {variant === 'grid' && onViewOnMap && hasPin && (
-            <button
-              type="button"
-              className="view-on-map-link"
-              onClick={(e) => {
-                e.stopPropagation();
-                onViewOnMap(place);
-              }}
-            >
-              <MapPin size={13} />
-              Show on map
-            </button>
-          )}
         </div>
       </div>
     );
